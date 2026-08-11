@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Student Performance Analytics Portal for managing student performance, attendance, reports, dashboards, and academic insights.">
+
+    <meta name="keywords" content="Student Portal, Analytics, Dashboard, Attendance, GPA, Reports, Education">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>Student Performance Analytics Portal</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Home Page Stylesheet -->
+
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Portal...</p>
+
+    </div>
+
+
+
+
+
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo" aria-label="Student Performance Analytics Portal Home">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Primary Navigation">
+
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a href="register.html">Register</a></li>
+
+                <!-- <li><a href="reports.html">Reports</a></li> -->
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+    <main id="main-content">
+
+
+
+        <!-- ==================== HERO SECTION ==================== -->
+
+        <section class="hero" id="heroSection" aria-labelledby="heroTitle">
+            <h1 id="heroTitle">
+
+                Student Performance Analytics Portal
+
+            </h1>
+
+            <p>
+
+                A modern web-based portal that helps students, teachers, and administrators monitor academic
+                performance,
+                attendance, reports, and learning progress through an interactive dashboard.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="login.html" class="btn" aria-label="Login to Student Portal">
+
+                    Get Started
+
+                </a>
+
+                <a href="about.html" class="btn secondary-btn" aria-label="Learn more about the Student Portal">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== FEATURES ==================== -->
+
+        <section id="featuresSection" class="dashboard-header" aria-labelledby="featuresHeading">
+
+            <h2 id="featuresHeading">
+
+                Portal Features
+
+            </h2>
+
+            <p>
+
+                Powerful tools for effective academic management.
+
+            </p>
+
+        </section>
+
+        <section id="featureCards" class="dashboard-cards">
+
+            <article class="card">
+
+                <h3>📊 Performance Analytics</h3>
+
+                <p>
+
+                    Interactive charts, GPA analysis,
+                    attendance tracking, and academic insights.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>🔐 Secure Authentication</h3>
+
+                <p>
+
+                    Registration, login,
+                    password recovery,
+                    and role-based access.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>🔔 Smart Notifications</h3>
+
+                <p>
+
+                    Real-time notifications,
+                    search,
+                    history,
+                    and unread tracking.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>📄 Reports & Export</h3>
+
+                <p>
+
+                    Generate,
+                    print,
+                    and export professional reports.
+
+                </p>
+
+            </article>
+
+        </section>
+
+        <section id="overviewSection" class="dashboard-header">
+
+            <h2 id="overviewHeading">
+                Portal Overview
+
+            </h2>
+
+        </section>
+
+        <section id="overviewCards" class="dashboard-cards" aria-labelledby="overviewHeading">
+
+            <article class="card">
+
+                <h3>
+
+                    Students
+
+                </h3>
+
+                <h2 id="homeStudents">
+
+                    250+
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>
+
+                    Teachers
+
+                </h3>
+
+                <h2 id="homeTeachers">
+
+                    35+
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>
+
+                    Courses
+
+                </h3>
+
+                <h2 id="homeCourses">
+
+                    42+
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>
+
+                    Departments
+
+                </h3>
+
+                <h2 id="homeDepartments">
+
+                    4
+
+                </h2>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ==================== WHY CHOOSE US ==================== -->
+
+        <section id="whySection" class="activity-section" aria-labelledby="whyHeading">
+
+            <h2 id="whyHeading">
+
+                Why Choose This Portal?
+
+            </h2>
+
+            <ul class="activity-list">
+
+                <li>✔ Responsive Design</li>
+
+                <li>✔ Role-Based Authentication</li>
+
+                <li>✔ Interactive Dashboards</li>
+
+                <li>✔ Performance Analytics</li>
+
+                <li>✔ Attendance Monitoring</li>
+
+                <li>✔ Smart Notifications</li>
+
+                <li>✔ Report Generation</li>
+
+                <li>✔ Profile Management</li>
+
+                <li>✔ Dark / Light Theme</li>
+
+            </ul>
+
+        </section>
+        <aside id="notificationPanel" class="notification-panel" aria-hidden="true">
+
+
+            <div class="notification-header">
+
+                <h3>
+
+                    Notifications
+
+                </h3>
+
+                <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+            <input type="search" id="notificationSearch" name="notificationSearch" class="notification-search"
+                placeholder="Search notifications..." autocomplete="off" aria-label="Search Notifications">
+
+            <div id="notificationList" aria-live="polite">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <!-- <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav> -->
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to Top">
+
+        ↑
+
+    </button>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Dashboard of the Student Performance Analytics Portal for accessing administrator, teacher, and student dashboards with analytics and reports.">
+
+    <meta name="keywords" content="Dashboard, Student Portal, Analytics, Reports, Attendance, Education">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Dashboard | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Dashboard Page Stylesheet -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Dashboard...</p>
+
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="dashboard.html" class="logo" aria-label="Student Performance Analytics Portal Dashboard">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Dashboard Navigation">
+
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+
+                <li><a href="profile.html">Profile</a></li>
+
+                <li><a href="reports.html">Reports</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <a id="logoutLink" href="login.html">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+        <!-- ==================== PAGE HEADER ==================== -->
+
+        <section id="dashboardHeader" class="dashboard-header portal-page-header" aria-labelledby="dashboardTitle">
+
+            <h1 id="dashboardTitle">
+                Dashboard Center
+            </h1>
+
+            <p>
+                Choose a dashboard according to your user role.
+            </p>
+
+        </section>
+
+
+        <section id="dashboardToolbar" class="dashboard-toolbar" aria-label="Dashboard Tools">
+
+            <input type="search" id="dashboardSearch" class="dashboard-search" placeholder="Search dashboard modules..."
+                autocomplete="off" aria-label="Search Dashboard Modules">
+
+            <button id="refreshDashboard" class="btn" type="button">
+
+                🔄 Refresh
+
+            </button>
+
+        </section>
+
+        <!-- ==================== DASHBOARD CARDS ==================== -->
+
+        <section class="dashboard-cards" id="dashboardCards">
+
+            <article class="card dashboard-card" data-role="Administrator">
+
+                <h2>👨‍💼</h2>
+
+                <h3>Administrator</h3>
+
+                <p>
+
+                    Manage students, teachers, departments and reports.
+
+                </p>
+
+                <br>
+
+                <a href="admin.html" class="btn">
+
+                    Open Dashboard
+
+                </a>
+
+            </article>
+
+            <article class="card dashboard-card" data-role="Teacher">
+
+                <h2>👨‍🏫</h2>
+
+                <h3>Teacher</h3>
+
+                <p>
+
+                    Manage classes, attendance, assignments and grades.
+
+                </p>
+
+                <br>
+
+                <a href="teacher.html" class="btn">
+
+                    Open Dashboard
+
+                </a>
+
+            </article>
+
+            <article class="card dashboard-card" data-role="Student">
+
+                <h2>👨‍🎓</h2>
+
+                <h3>Student</h3>
+
+                <p>
+
+                    View GPA, attendance, courses and academic progress.
+
+                </p>
+
+                <br>
+
+                <a href="student.html" class="btn">
+
+                    Open Dashboard
+
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- ==================== PORTAL FEATURES ==================== -->
+
+        <section id="portalModules" class="activity-section" aria-labelledby="modulesTitle">
+
+            <h2 id="modulesTitle">
+
+                Portal Modules
+
+            </h2>
+
+            <ul class="activity-list">
+
+                <li>✔ Secure Authentication</li>
+
+                <li>✔ Role-Based Dashboards</li>
+
+                <li>✔ Student Performance Analytics</li>
+
+                <li>✔ Interactive Charts</li>
+
+                <li>✔ Attendance Monitoring</li>
+
+                <li>✔ Report Generation & Export</li>
+
+                <li>✔ Smart Notification Center</li>
+
+                <li>✔ Profile Management</li>
+
+                <li>✔ Dark / Light Theme</li>
+
+                <li>✔ Responsive Design</li>
+
+            </ul>
+
+        </section>
+
+        <section id="overviewHeader" class="dashboard-header" aria-labelledby="overviewTitle">
+
+            <h2 id="overviewTitle">
+
+                Portal Overview
+
+            </h2>
+
+        </section>
+
+        <section id="overviewCards" class="dashboard-cards" aria-labelledby="overviewTitle">
+
+            <article class="card">
+
+                <h3>Total Users</h3>
+
+                <h2 id="totalUsers">
+
+                    285
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Departments</h3>
+
+                <h2 id="departmentCount">
+
+                    4
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Courses</h3>
+
+                <h2 id="courseCount">
+
+                    42
+
+                </h2>
+
+            </article>
+
+        </section>
+
+        <!-- ==================== NOTIFICATION PANEL ==================== -->
+
+        <aside id="notificationPanel" class="notification-panel" aria-hidden="true">
+
+            <div class="notification-header">
+
+                <h3>
+
+                    Notifications
+
+                </h3>
+
+                <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+            <input type="search" id="notificationSearch" class="notification-search"
+                placeholder="Search notifications..." autocomplete="off" aria-label="Search Notifications">
+
+            <div id="notificationList">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

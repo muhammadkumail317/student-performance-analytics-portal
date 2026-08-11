@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Teacher Dashboard of the Student Performance Analytics Portal for managing classes, attendance, assignments, grades, and student performance.">
+
+    <meta name="keywords"
+        content="Teacher Dashboard, Student Portal, Attendance, Assignments, Grades, Analytics, Education">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Teacher Dashboard | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/teacher.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Dashboard...</p>
+
+    </div>
+
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header" role="banner">
+
+        <nav class="navbar" role="navigation">
+
+            <a href="teacher.html" class="logo" aria-label="Student Performance Analytics Portal">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Teacher Navigation">
+
+                <li><a href="teacher.html" class="active">Dashboard</a></li>
+
+                <li><a href="profile.html">Profile</a></li>
+
+                <li><a href="reports.html">Reports</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <a id="logoutLink" href="login.html" aria-label="Logout">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+        <!-- ==================== PAGE HEADER ==================== -->
+
+        <section class="dashboard-header portal-page-header">
+
+            <h1>
+                Teacher Dashboard
+            </h1>
+
+            <p>
+                Manage classes, attendance, assignments and monitor student performance.
+            </p>
+
+        </section>
+
+        <!-- ==================== STATISTICS ==================== -->
+
+        <section id="teacherStatistics" class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>My Classes</h3>
+
+                <p class="stat-number" id="teacherClasses">
+                    6
+                </p>
+                <p>Assigned Classes</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total Students</h3>
+
+                <p class="stat-number" id="teacherStudents">
+                    180
+                </p>
+
+                <p>Currently Enrolled</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Assignments</h3>
+
+                <p class="stat-number" id="teacherAssignments">
+                    24
+                </p>
+
+                <p>Uploaded</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Attendance</h3>
+
+                <p class="stat-number" id="teacherAttendance">
+
+                    92%
+
+                </p>
+
+                <p>Average Attendance</p>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-toolbar" role="search">
+
+            <input type="search" id="dashboardSearch" class="dashboard-search" autocomplete="off"
+                placeholder="Search students..." aria-label="Search Students">
+
+            <button id="refreshDashboard" class="btn" type="button">
+
+                🔄 Refresh
+
+            </button>
+
+        </section>
+
+        <!-- ==================== QUICK ACTIONS ==================== -->
+
+        <header class="dashboard-header">
+
+            <h2>
+
+                Teacher Activities
+
+            </h2>
+
+        </header>
+
+        <section id="teacherActivities" class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>📚 My Classes</h3>
+
+                <p>
+
+                    Manage your assigned classes.
+
+                </p>
+
+                <button id="myClassesBtn" class="btn" type="button">
+
+                    Open
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📝 Upload Assignment</h3>
+
+                <p>
+
+                    Create and upload assignments.
+
+                </p>
+
+                <button id="uploadAssignmentBtn" class="btn" type="button">
+
+                    Upload
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>✅ Mark Attendance</h3>
+
+                <p>
+
+                    Update student attendance records.
+
+                </p>
+
+                <button id="markAttendanceBtn" class="btn" type="button">
+
+                    Manage
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📈 Student Performance</h3>
+
+                <p>
+
+                    Monitor GPA and academic progress.
+
+                </p>
+
+                <button id="studentPerformanceBtn" class="btn" type="button">
+
+                    View
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== STUDENT TABLE ==================== -->
+
+        <section id="studentTableSection" class="table-section">
+
+            <h2>
+
+                My Students
+
+            </h2>
+
+            <table id="studentTable">
+
+                <caption>
+
+                    List of students assigned to the current teacher
+
+                </caption>
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">ID</th>
+
+                        <th scope="col">Name</th>
+
+                        <th scope="col">Department</th>
+
+                        <th scope="col">Attendance</th>
+
+                        <th scope="col">CGPA</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                    <tr>
+
+                        <td>SP001</td>
+
+                        <td>Muhammad Kumail</td>
+
+                        <td>Computer Science</td>
+
+                        <td>95%</td>
+
+                        <td>3.82</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP002</td>
+
+                        <td>Ali Khan</td>
+
+                        <td>Software Engineering</td>
+
+                        <td>92%</td>
+
+                        <td>3.54</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP003</td>
+
+                        <td>Sara Ahmed</td>
+
+                        <td>Artificial Intelligence</td>
+
+                        <td>96%</td>
+
+                        <td>3.91</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP004</td>
+
+                        <td>Fatima Noor</td>
+
+                        <td>Information Technology</td>
+
+                        <td>90%</td>
+
+                        <td>3.68</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ==================== ANALYTICS ==================== -->
+
+        <section id="teacherAnalytics" class="dashboard-cards">
+
+            <h2>
+
+                Class Analytics
+
+            </h2>
+
+
+
+            <div class="dashboard-cards">
+
+                <div class="card">
+
+                    <h3>Attendance</h3>
+
+                    <canvas id="attendanceChart" aria-label="Attendance Chart" role="img">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Average GPA</h3>
+
+                    <canvas id="gpaChart" aria-label="Average GPA Chart" role="img">
+                    </canvas>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div id="analyticsToolbar" class="dashboard-toolbar">
+            <label for="chartFilter" class="visually-hidden">
+
+                Filter Analytics
+
+            </label>
+
+            <select id="chartFilter" aria-label="Filter Analytics">
+
+                <option value="semester">
+
+                    Semester
+
+                </option>
+
+                <option value="month">
+
+                    Month
+
+                </option>
+
+                <option value="week">
+
+                    Week
+
+                </option>
+
+            </select>
+
+            <button id="exportCharts" class="btn" type="button">
+
+                Export Charts
+
+            </button>
+
+            <button id="printAnalytics" class="btn" type="button">
+
+                Print Analytics
+
+            </button>
+
+        </div>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>
+
+                    Top Performing Class
+
+                </h3>
+
+                <p id="topClass">
+
+                    BS Computer Science
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Pending Assignments
+
+                </h3>
+
+                <p class="stat-number" id="pendingAssignments">
+                    4
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Attendance Submitted
+
+                </h3>
+
+                <p class="stat-number" id="attendanceSubmitted">
+
+                    92%
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== NOTIFICATION PANEL ==================== -->
+
+        <div id="notificationPanel" class="notification-panel" role="dialog" aria-labelledby="notificationTitle"
+            aria-hidden="true">
+
+            <div class="notification-header">
+
+                <h3 id="notificationTitle">
+
+                    Notifications
+
+                </h3>
+
+                <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+            <input type="search" id="notificationSearch" class="notification-search" autocomplete="off"
+                placeholder="Search notifications..." aria-label="Search Notifications">
+
+            <div id="notificationList" aria-live="polite">
+
+            </div>
+
+        </div>
+
+        <div id="loadingOverlay" class="loading-overlay" role="status" aria-live="polite" aria-hidden="true">
+
+            <div class="loader-circle"></div>
+
+            <p aria-live="polite">
+                Loading dashboard...
+            </p>
+
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1489 @@
+/* ==============================================================
+   ADMIN.CSS
+   Student Performance Analytics Portal
+
+   Administrator Dashboard
+   Professional Page-Specific Styling
+   ============================================================== */
+
+
+/* ==============================================================
+   01. ADMINISTRATOR PAGE FOUNDATION
+   ============================================================== */
+
+body:has(#adminHeader) {
+    overflow-x: hidden;
+}
+
+
+/* ==============================================================
+   02. ADMIN PAGE HEADER
+   ============================================================== */
+
+#adminHeader {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        42px auto 0;
+
+    padding:
+        34px 36px;
+
+    text-align:
+        center;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+#adminHeader::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        4px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            var(--primary-light));
+}
+
+
+#adminTitle {
+    margin:
+        0;
+
+    color:
+        var(--text);
+
+    font-size:
+        clamp(1.65rem,
+            3vw,
+            2.35rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -0.035em;
+}
+
+
+#adminHeader p {
+    margin:
+        10px auto 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.78rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* ==============================================================
+   03. ADMIN STATISTICS
+   ============================================================== */
+
+#statisticsCards {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        24px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+/* ==============================================================
+   04. STATISTIC CARDS
+   ============================================================== */
+
+#statisticsCards .card {
+    min-width:
+        0;
+
+    min-height:
+        150px;
+
+    padding:
+        23px 22px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+
+#statisticsCards .card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            var(--primary-light));
+}
+
+
+#statisticsCards .card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(99,
+            102,
+            241,
+            0.28);
+
+    box-shadow:
+        0 14px 30px rgba(15,
+            23,
+            42,
+            0.10);
+}
+
+
+#statisticsCards .card h3 {
+    margin:
+        0 0 10px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        600;
+}
+
+
+#statisticsCards .card h1 {
+    margin:
+        0;
+
+    color:
+        var(--primary);
+
+    font-size:
+        2rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.1;
+}
+
+
+#statisticsCards .card p {
+    margin:
+        8px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.65rem;
+}
+
+
+/* ==============================================================
+   05. ADMIN TOOLBARS
+   ============================================================== */
+
+#main-content>.dashboard-toolbar {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        22px auto 0;
+
+    padding:
+        14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+#main-content>.dashboard-toolbar .dashboard-search {
+    flex:
+        1 1 auto;
+
+    min-width:
+        0;
+
+    height:
+        44px;
+
+    padding:
+        0 14px;
+
+    color:
+        var(--text);
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        9px;
+
+    outline:
+        none;
+
+    font-family:
+        inherit;
+
+    font-size:
+        0.72rem;
+
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+
+#main-content>.dashboard-toolbar .dashboard-search:focus {
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(79,
+            70,
+            229,
+            0.10);
+}
+
+
+/* ==============================================================
+   06. QUICK ACTIONS HEADER
+   ============================================================== */
+
+#quickActionsHeader,
+#analyticsHeader {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        42px auto 0;
+
+    padding:
+        0;
+
+    background:
+        transparent;
+
+    border:
+        0;
+
+    box-shadow:
+        none;
+
+    text-align:
+        left;
+}
+
+
+#quickActionsHeader h2,
+#analyticsHeader h2 {
+    margin:
+        0;
+
+    color:
+        var(--text);
+
+    font-size:
+        1.3rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.3;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* ==============================================================
+   07. QUICK ACTION CARDS
+   ============================================================== */
+
+#quickActions {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        20px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+#quickActions .card {
+    min-width:
+        0;
+
+    min-height:
+        190px;
+
+    padding:
+        24px 21px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+
+#quickActions .card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            var(--primary-light));
+}
+
+
+#quickActions .card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(99,
+            102,
+            241,
+            0.28);
+
+    box-shadow:
+        0 14px 30px rgba(15,
+            23,
+            42,
+            0.10);
+}
+
+
+#quickActions .card h3 {
+    margin:
+        0 0 12px;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        650;
+
+    line-height:
+        1.5;
+}
+
+
+#quickActions .card p {
+    margin:
+        0 0 18px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.68rem;
+
+    line-height:
+        1.7;
+}
+
+
+#quickActions .card .btn {
+    margin-top:
+        auto;
+
+    align-self:
+        flex-start;
+}
+
+
+/* ==============================================================
+   08. STUDENT RECORDS
+   ============================================================== */
+
+#studentRecords {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        42px auto 0;
+
+    padding:
+        26px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    overflow:
+        hidden;
+}
+
+
+#studentRecords h2 {
+    margin:
+        0;
+
+    color:
+        var(--text);
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* ==============================================================
+   09. STUDENT TABLE
+   ============================================================== */
+
+#studentTable {
+    width:
+        100%;
+
+    border-collapse:
+        separate;
+
+    border-spacing:
+        0;
+
+    overflow:
+        hidden;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.7rem;
+}
+
+
+#studentTable thead th {
+    padding:
+        13px 14px;
+
+    color:
+        var(--text);
+
+    background:
+        var(--surface-soft);
+
+    border-bottom:
+        1px solid var(--border);
+
+    text-align:
+        left;
+
+    font-size:
+        0.66rem;
+
+    font-weight:
+        650;
+
+    white-space:
+        nowrap;
+}
+
+
+#studentTable thead th:first-child {
+    border-top-left-radius:
+        9px;
+}
+
+
+#studentTable thead th:last-child {
+    border-top-right-radius:
+        9px;
+}
+
+
+#studentTable tbody td {
+    padding:
+        13px 14px;
+
+    color:
+        var(--text-secondary);
+
+    border-bottom:
+        1px solid var(--border);
+
+    vertical-align:
+        middle;
+}
+
+
+#studentTable tbody tr {
+    transition:
+        background-color 150ms ease;
+}
+
+
+#studentTable tbody tr:hover {
+    background:
+        rgba(99,
+            102,
+            241,
+            0.045);
+}
+
+
+#studentTable tbody tr:last-child td {
+    border-bottom:
+        0;
+}
+
+
+/* Status cell */
+
+#studentTable tbody td:last-child {
+    color:
+        var(--primary);
+
+    font-weight:
+        600;
+}
+
+
+/* ==============================================================
+   10. ANALYTICS CARDS
+   ============================================================== */
+
+#analyticsCards {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        20px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+#analyticsCards .card {
+    min-width:
+        0;
+
+    height:
+        330px;
+
+    min-height:
+        330px;
+
+    padding:
+        22px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+#analyticsCards .card h3 {
+    margin:
+        0 0 16px;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        650;
+}
+
+
+/*
+   CRITICAL:
+   Prevent Chart.js canvas from continuously growing.
+*/
+
+#analyticsCards .card canvas {
+    display:
+        block !important;
+
+    width:
+        100% !important;
+
+    max-width:
+        100% !important;
+
+    height:
+        245px !important;
+
+    max-height:
+        245px !important;
+}
+
+
+/* ==============================================================
+   11. PERFORMANCE SUMMARY
+   ============================================================== */
+
+#performanceSummary {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        20px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+#performanceSummary .card {
+    min-width:
+        0;
+
+    padding:
+        22px 24px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        15px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+#performanceSummary h3 {
+    margin:
+        0 0 8px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        600;
+}
+
+
+#performanceSummary h2 {
+    margin:
+        0;
+
+    color:
+        var(--primary);
+
+    font-size:
+        1.9rem;
+
+    font-weight:
+        700;
+}
+
+
+/* ==============================================================
+   12. CHART TOOLBAR
+   ============================================================== */
+
+#chartToolbar,
+#analyticsActions {
+    flex-wrap:
+        wrap;
+}
+
+
+#chartToolbar select {
+    height:
+        42px;
+
+    padding:
+        0 35px 0 12px;
+
+    color:
+        var(--text);
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        9px;
+
+    font-family:
+        inherit;
+
+    font-size:
+        0.7rem;
+
+    outline:
+        none;
+
+    cursor:
+        pointer;
+}
+
+
+#chartToolbar select:focus {
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(79,
+            70,
+            229,
+            0.10);
+}
+
+
+/* ==============================================================
+   13. TOP PERFORMERS
+   ============================================================== */
+
+#topPerformerSection {
+    width:
+        min(calc(100% - 48px),
+            1180px);
+
+    margin:
+        20px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0,
+            0.8fr) minmax(0,
+            1.2fr);
+
+    gap:
+        16px;
+}
+
+
+#topPerformerSection .card {
+    min-width:
+        0;
+
+    min-height:
+        145px;
+
+    padding:
+        22px 24px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+#topPerformerSection h3 {
+    margin:
+        0 0 10px;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        650;
+}
+
+
+#performancePrediction {
+    margin:
+        0;
+
+    color:
+        var(--primary);
+
+    font-size:
+        2rem;
+
+    font-weight:
+        700;
+}
+
+
+/* Top performer generated content */
+
+#topPerformers {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        8px;
+}
+
+
+#topPerformers>* {
+    padding:
+        8px 10px;
+
+    color:
+        var(--text-secondary);
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        8px;
+
+    font-size:
+        0.68rem;
+}
+
+
+/* ==============================================================
+   14. FILE IMPORT
+   ============================================================== */
+
+#chartImport {
+    min-width:
+        180px;
+
+    max-width:
+        100%;
+
+    color:
+        var(--text-secondary);
+
+    font-family:
+        inherit;
+
+    font-size:
+        0.68rem;
+}
+
+
+/* ==============================================================
+   15. DARK THEME
+   ============================================================== */
+
+.dark-theme #statisticsCards .card:hover,
+.dark-theme #quickActions .card:hover,
+.dark-theme #analyticsCards .card:hover {
+
+    box-shadow:
+        0 16px 34px rgba(0,
+            0,
+            0,
+            0.25);
+}
+
+
+.dark-theme #studentTable tbody tr:hover {
+
+    background:
+        rgba(99,
+            102,
+            241,
+            0.08);
+}
+
+
+/* ==============================================================
+   16. TABLET
+   ============================================================== */
+
+@media (max-width: 1000px) {
+
+    #statisticsCards {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+
+    #quickActions {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+
+    #analyticsCards {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+
+    #analyticsCards .card:last-child {
+
+        grid-column:
+            1 / -1;
+
+        max-width:
+            calc(50% - 8px);
+
+        width:
+            100%;
+
+        margin:
+            0 auto;
+
+    }
+
+}
+
+
+/* ==============================================================
+   17. SMALL TABLET
+   ============================================================== */
+
+@media (max-width: 760px) {
+
+    #adminHeader,
+    #statisticsCards,
+    #main-content>.dashboard-toolbar,
+    #quickActionsHeader,
+    #quickActions,
+    #studentRecords,
+    #analyticsHeader,
+    #analyticsCards,
+    #performanceSummary,
+    #chartToolbar,
+    #topPerformerSection,
+    #analyticsActions {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+
+    #analyticsCards {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    #analyticsCards .card:last-child {
+
+        grid-column:
+            auto;
+
+        max-width:
+            none;
+
+    }
+
+
+    #performanceSummary {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    #topPerformerSection {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    #studentRecords {
+
+        padding:
+            20px;
+
+        overflow-x:
+            auto;
+
+    }
+
+
+    #studentTable {
+
+        min-width:
+            650px;
+
+    }
+
+}
+
+
+/* ==============================================================
+   18. MOBILE
+   ============================================================== */
+
+@media (max-width: 600px) {
+
+    #adminHeader {
+
+        margin-top:
+            28px;
+
+        padding:
+            30px 20px;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    #adminTitle {
+
+        font-size:
+            1.55rem;
+
+    }
+
+
+    #adminHeader p {
+
+        font-size:
+            0.7rem;
+
+    }
+
+
+    #statisticsCards {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+
+    #statisticsCards .card {
+
+        min-height:
+            130px;
+
+    }
+
+
+    #quickActions {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+
+    #quickActions .card {
+
+        min-height:
+            175px;
+
+    }
+
+
+    #main-content>.dashboard-toolbar {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    #main-content>.dashboard-toolbar .dashboard-search {
+
+        width:
+            100%;
+
+    }
+
+
+    #main-content>.dashboard-toolbar .btn {
+
+        width:
+            100%;
+
+    }
+
+
+    #analyticsCards .card {
+
+        height:
+            300px;
+
+        min-height:
+            300px;
+
+        padding:
+            18px;
+
+    }
+
+
+    #analyticsCards .card canvas {
+
+        height:
+            220px !important;
+
+        max-height:
+            220px !important;
+
+    }
+
+
+    #chartToolbar,
+    #analyticsActions {
+
+        align-items:
+            stretch;
+
+    }
+
+
+    #chartToolbar .btn,
+    #chartToolbar select,
+    #analyticsActions .btn,
+    #chartImport {
+
+        width:
+            100%;
+
+    }
+
+
+    #performanceSummary .card {
+
+        padding:
+            20px;
+
+    }
+
+
+    #studentRecords {
+
+        margin-top:
+            30px;
+
+    }
+
+}
+
+
+/* ==============================================================
+   19. SMALL MOBILE
+   ============================================================== */
+
+@media (max-width: 400px) {
+
+    #adminHeader,
+    #statisticsCards,
+    #main-content>.dashboard-toolbar,
+    #quickActionsHeader,
+    #quickActions,
+    #studentRecords,
+    #analyticsHeader,
+    #analyticsCards,
+    #performanceSummary,
+    #chartToolbar,
+    #topPerformerSection,
+    #analyticsActions {
+
+        width:
+            calc(100% - 20px);
+
+    }
+
+
+    #adminTitle {
+
+        font-size:
+            1.4rem;
+
+    }
+
+
+    #analyticsCards .card {
+
+        height:
+            280px;
+
+        min-height:
+            280px;
+
+    }
+
+
+    #analyticsCards .card canvas {
+
+        height:
+            205px !important;
+
+        max-height:
+            205px !important;
+
+    }
+
+}
+
+
+/* ==============================================================
+   20. REDUCED MOTION
+   ============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #statisticsCards .card,
+    #quickActions .card,
+    #studentTable tbody tr {
+
+        transition:
+            none;
+
+    }
+
+}
+
+
+/* ==============================================================
+   END — ADMIN.CSS
+   ============================================================== */

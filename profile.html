@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Manage your personal profile, account settings, profile picture, and password in the Student Performance Analytics Portal.">
+
+    <meta name="keywords" content="Profile, Student Portal, Account Settings, Student Profile, Password, Dashboard">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        My Profile | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- profile page Stylesheet -->
+    <link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Profile...</p>
+
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header" role="banner">
+
+        <nav class="navbar" role="navigation">
+
+            <a href="dashboard.html" class="logo" aria-label="Student Performance Analytics Portal">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Profile Navigation">
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="profile.html" class="active">Profile</a>
+                </li>
+
+                <li>
+                    <a href="reports.html">Reports</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <a id="logoutLink" href="login.html" aria-label="Logout">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+
+    <!-- ==================== PAGE HEADER ==================== -->
+
+    <section class="dashboard-header profile-page-header">
+
+        <h1>
+            My Profile
+        </h1>
+
+        <p>
+            Manage your personal information and account settings.
+        </p>
+
+    </section>
+
+    <!-- ==================== PROFILE ==================== -->
+
+    <main class="profile-container">
+
+        <div class="profile-grid">
+
+            <!-- LEFT SIDEBAR -->
+
+            <aside class="profile-sidebar" aria-label="Profile Summary">
+
+                <div class="profile-avatar">
+
+                    <img id="previewImage" src="images/default-user.png" alt="Profile Picture" loading="lazy">
+
+                </div>
+
+                <h2 id="userName">
+
+                    Muhammad Kumail Noor
+
+                </h2>
+
+                <p class="profile-role">
+
+                    Student
+
+                </p>
+
+                <span class="profile-status">
+
+                    Active
+
+                </span>
+
+                <div class="profile-image-actions">
+
+                    <label for="profileImage" class="btn">
+                        Upload Image
+                    </label>
+
+                    <input type="file" hidden id="profileImage" accept="image/*">
+
+                    <button id="removeProfileImageBtn" type="button" class="btn">
+                        Remove Image
+                    </button>
+
+                </div>
+
+            </aside>
+
+            <!-- RIGHT CONTENT -->
+
+            <section class="profile-content">
+                <div class="dashboard-toolbar">
+
+                    <button id="refreshProfile" class="btn" type="button">
+
+                        Refresh
+
+                    </button>
+
+                    <button id="exportProfile" class="btn" type="button">
+
+                        Export
+
+                    </button>
+
+                </div>
+
+                <h2 class="section-title">
+
+                    Edit Profile
+
+                </h2>
+                <!-- ==================== PROFILE FORM ==================== -->
+
+                <form id="profileForm" autocomplete="on" class="profile-form">
+
+                    <div>
+
+                        <label for="name">
+
+                            Full Name
+
+                        </label>
+
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name">
+
+                    </div>
+
+                    <div>
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email">
+
+                    </div>
+
+                    <div>
+
+                        <label for="department">
+
+                            Department
+
+                        </label>
+
+                        <select id="department">
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Software Engineering">
+                                Software Engineering
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label for="phone">
+
+                            Phone Number
+
+                        </label>
+
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+92 300 1234567">
+
+                    </div>
+
+                    <div>
+
+                        <label for="dob">
+
+                            Date of Birth
+
+                        </label>
+
+                        <input type="date" id="dob" name="dob" autocomplete="bday"
+                            placeholder="Select your date of birth">
+
+                    </div>
+
+                    <div>
+
+                        <label for="gender">
+
+                            Gender
+
+                        </label>
+
+                        <select id="gender" name="gender">
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="full-width">
+
+                        <label for="address">
+
+                            Address
+
+                        </label>
+
+                        <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+
+                    </div>
+
+                    <!-- ==================== BUTTONS ==================== -->
+
+                    <div class="profile-actions full-width">
+
+                        <button type="submit" class="btn">
+
+                            Save Profile
+
+                        </button>
+
+                        <button type="reset" class="btn">
+
+                            Reset
+
+                        </button>
+
+                        <button type="button" class="btn" id="exportProfileBtn">
+
+                            Export Profile
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+
+
+
+
+
+
+                <!-- ==================== PASSWORD SECTION ==================== -->
+
+                <section class="password-card" aria-labelledby="passwordHeading">
+
+                    <h3 id="passwordHeading">
+
+                        Change Password
+
+                    </h3>
+
+                    <div class="profile-form">
+
+                        <div>
+
+                            <label for="currentPassword">
+
+                                Current Password
+
+                            </label>
+
+                            <input type="password" id="currentPassword" placeholder="Enter current password">
+
+                        </div>
+
+                        <div>
+
+                            <label for="newPassword">
+
+                                New Password
+
+                            </label>
+
+                            <input type="password" id="newPassword" placeholder="Enter new password">
+
+                        </div>
+
+                        <div class="full-width">
+
+                            <label for="confirmPassword">
+
+                                Confirm Password
+
+                            </label>
+
+                            <input type="password" id="confirmPassword" placeholder="Confirm new password">
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-actions">
+
+                        <button type="button" class="btn" id="updatePasswordBtn">
+
+                            Update Password
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <!-- ==================== ACCOUNT INFORMATION ==================== -->
+
+                <section id="accountInformation" class="account-info" aria-labelledby="accountInformationHeading">
+
+                    <h2 id="accountInformationHeading" class="visually-hidden">
+                        Account Information
+                    </h2>
+
+                    <div class="info-card">
+
+                        <h4>
+
+                            Student ID
+
+                        </h4>
+
+                        <p id="studentId">
+
+                            SPA-2026-001
+
+                        </p>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h4>
+
+                            Department
+
+                        </h4>
+
+                        <p id="departmentInfo">
+
+                            Computer Science
+
+                        </p>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h4>
+
+                            Account Status
+
+                        </h4>
+
+                        <p>
+
+                            Active
+
+                        </p>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h4>
+
+                            Registration
+
+                        </h4>
+
+                        <p>
+
+                            Completed
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- ==================== PROFILE STATISTICS ==================== -->
+
+                <section id="profileStatistics" class="profile-stats" aria-labelledby="profileStatisticsHeading">
+                    <h2 id="profileStatisticsHeading" class="visually-hidden">
+                        Profile Statistics
+                    </h2>
+
+                    <div class="profile-stat">
+
+                        <p class="stat-number" id="totalCourses">
+
+                            12
+
+                        </p>
+
+                        <p>
+
+                            Total Courses
+
+                        </p>
+
+                    </div>
+
+                    <div class="profile-stat">
+
+                        <p class="stat-number" id="averageGPA">
+
+                            3.75
+
+                        </p>
+
+                        <p>
+
+                            Average GPA
+
+                        </p>
+
+                    </div>
+
+                    <div class="profile-stat">
+
+                        <p class="stat-number" id="attendanceRate">
+
+                            95%
+
+                        </p>
+
+                        <p>
+
+                            Attendance
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section class="dashboard-cards">
+
+                    <div class="card">
+
+                        <p class="stat-number" id="profileCompletionLabel">
+
+                            Profile Completion
+
+                        </p>
+
+                        <h2 id="profileCompletion">
+
+                            90%
+
+                        </h2>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>
+
+                            Last Login
+
+                        </h3>
+
+                        <p id="lastLogin">
+
+                            Today
+
+                        </p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>
+
+                            Account Type
+
+                        </h3>
+
+                        <p id="accountType">
+                            Student
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+        </div>
+
+    </main>
+    <!-- ==================== NOTIFICATION PANEL ==================== -->
+
+    <aside id="notificationPanel" class="notification-panel" aria-labelledby="notificationHeading">
+
+        <div class="notification-header">
+
+            <h3 id="notificationHeading">
+
+                Notifications
+
+            </h3>
+
+            <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <input type="search" id="notificationSearch" autocomplete="off" aria-label="Search Notifications"
+            class="notification-search" placeholder="Search notifications...">
+
+        <div id="notificationList" class="notification-list">
+
+            <!-- Notifications will be loaded by notifications.js -->
+
+            <div class="notification-item">
+
+                <h4>
+
+                    Welcome!
+
+                </h4>
+
+                <p>
+
+                    Welcome to the Student Performance Analytics Portal.
+
+                </p>
+
+                <small>
+
+                    Just now
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </aside>
+    <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+
+        <div class="loader-circle"></div>
+
+        <p aria-live="polite">
+            Saving profile...
+        </p>
+
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/profile.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

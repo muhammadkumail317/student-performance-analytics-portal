@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Register for the Student Performance Analytics Portal to create a secure student, teacher, or administrator account.">
+
+    <meta name="keywords" content="Student Portal,Register,Create Account,Student Dashboard, Education, Analytics">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>Register | Student Performance Analytics Portal</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Register Page Stylesheet -->
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Portal...</p>
+
+    </div>
+
+    <main id="main-content">
+
+        <section id="registerSection" class="auth-section">
+
+            <div id="registerCard" class="auth-card">
+
+                <div id="registerLogo" class="auth-logo">
+
+                    <h1>
+
+                        Student Portal
+
+                    </h1>
+
+                    <p>
+
+                        Create your Student Portal account
+
+                    </p>
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </div>
+
+                <form id="registerForm" class="auth-form">
+
+                    <div id="fullNameGroup" class="auth-group">
+
+                        <label for="fullName">
+
+                            Full Name
+
+                        </label>
+
+                        <input type="text" id="fullName" name="fullName" autocomplete="name"
+                            placeholder="Enter your full name" required>
+
+                    </div>
+
+                    <div id="emailGroup" class="auth-group">
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                    <div id="departmentGroup" class="auth-group">
+
+                        <label for="department">
+
+                            Department
+
+                        </label>
+
+                        <select id="department" name="department" required>
+
+                            <option value="">
+
+                                Select Department
+
+                            </option>
+
+                            <option>
+
+                                Computer Science
+
+                            </option>
+
+                            <option>
+
+                                Software Engineering
+
+                            </option>
+
+                            <option>
+
+                                Information Technology
+
+                            </option>
+
+                            <option>
+
+                                Artificial Intelligence
+
+                            </option>
+
+
+                        </select>
+                    </div>
+                    <div id="roleGroup" class="auth-group">
+
+                        <label for="role">
+
+                            Account Type
+
+                        </label>
+
+                        <select id="role" name="role" required>
+
+                            <option value="">
+
+                                Select Role
+
+                            </option>
+
+                            <option value="student">
+
+                                Student
+
+                            </option>
+
+                            <option value="teacher">
+
+                                Teacher
+
+                            </option>
+
+                            <option value="admin">
+
+                                Administrator
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- </div> -->
+
+                    <div id="phoneGroup" class="auth-group">
+
+                        <label for="phone">
+
+                            Phone Number
+
+                        </label>
+
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+92 300 1234567"
+                            pattern="[0-9+\-\s]{10,15}">
+
+                    </div>
+
+                    <div id="passwordGroup" class="auth-group">
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+                        <div class="password-group">
+
+                            <input type="password" id="password" name="password" autocomplete="new-password"
+                                placeholder="Create password" required>
+
+                            <button type="button" id="togglePassword" class="password-toggle"
+                                aria-label="Show Password">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div id="confirmPasswordGroup" class="auth-group">
+
+                        <label for="confirmPassword">
+
+                            Confirm Password
+
+                        </label>
+
+                        <div class="password-group">
+
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                autocomplete="new-password" placeholder="Confirm password" required>
+
+                            <button type="button" id="toggleConfirmPassword" class="password-toggle"
+                                aria-label="Show Password">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div id="passwordStrengthGroup" class="auth-group">
+
+                        <label for="passwordStrength">
+
+                            Password Strength
+
+                        </label>
+
+                        <div id="passwordStrength" class="password-strength">
+
+                            <div id="strengthFill" class="strength-fill"></div>
+
+                        </div>
+
+                        <p id="strengthText" class="strength-text">
+
+                            Weak Password
+
+                        </p>
+
+                    </div>
+                    <div id="registerInfo" class="auth-info">
+
+                        <p>
+
+                            ✔ Use a valid email address.
+
+                        </p>
+
+                        <p>
+
+                            ✔ Password should contain at least 8 characters.
+
+                        </p>
+
+                    </div>
+
+                    <button type="submit" class="auth-btn">
+
+                        Create Account
+
+                    </button>
+                    <!-- ==================== LINKS ==================== -->
+
+                    <div id="registerLinks" class="auth-links">
+
+                        <a href="login.html">
+
+                            Already have an account? Login
+
+                        </a>
+
+                        <a href="forgot-password.html">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                </form>
+
+                <!-- ==================== DIVIDER ==================== -->
+
+                <div id="registerDivider" class="auth-divider">
+
+                    <span>
+
+                        Student Performance Analytics Portal
+
+                    </span>
+
+                </div>
+
+                <!-- ==================== FOOTER ==================== -->
+
+                <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+                <footer class="site-footer" role="contentinfo">
+
+                    <div class="footer-container">
+
+                        <!-- Brand -->
+                        <div class="footer-brand">
+
+                            <a href="index.html" class="footer-logo">
+                                Student Portal
+                            </a>
+
+                            <p class="footer-description">
+                                Student Performance Analytics Portal for managing
+                                academic performance, attendance, analytics and reports.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Quick Access -->
+                        <!-- <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                            <h3>
+                                Quick Access
+                            </h3>
+
+                            <div class="footer-links">
+
+                                <a href="dashboard.html">
+                                    Dashboard
+                                </a>
+
+                                <a href="reports.html">
+                                    Reports
+                                </a>
+
+                                <a href="profile.html">
+                                    Profile
+                                </a>
+
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+
+                            </div>
+
+                        </nav> -->
+
+                    </div>
+
+
+                    <!-- Footer Bottom -->
+
+                    <div class="footer-bottom">
+
+                        <div class="footer-status">
+
+                            <span class="status-indicator" aria-hidden="true"></span>
+
+                            <span>
+                                System Operational
+                            </span>
+
+                        </div>
+
+
+                        <p class="footer-copyright">
+
+                            © <span id="currentYear"></span>
+                            Student Performance Analytics Portal.
+                            All Rights Reserved.
+
+                        </p>
+
+
+                        <p class="footer-developer">
+
+                            Developed by
+                            <strong>Muhammad Kumail Noor</strong>
+
+                        </p>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ==================== LOADING OVERLAY ==================== -->
+
+    <div id="loadingOverlay" class="loading-overlay">
+
+        <div class="loader-circle"></div>
+
+        <p>
+
+            Creating your account...
+
+        </p>
+
+    </div>
+
+    <!-- ==================== TOAST ==================== -->
+
+    <div id="toast" class="toast">
+
+        Processing...
+
+    </div>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

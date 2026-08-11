@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Student Dashboard of the Student Performance Analytics Portal for monitoring GPA, attendance, assignments, courses, and academic progress.">
+
+    <meta name="keywords"
+        content="Student Dashboard, Student Portal, GPA, Attendance, Courses, Assignments, Academic Progress">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Student Dashboard | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Student Dashboard Styles -->
+    <link rel="stylesheet" href="css/student.css">
+
+</head>
+
+
+<body>
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>
+
+            Loading Dashboard...
+
+        </p>
+
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header" role="banner">
+
+        <nav class="navbar" role="navigation">
+
+            <a href="student.html" class="logo" aria-label="Student Performance Analytics Portal">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Student Navigation">
+
+                <li><a href="student.html" class="active">Dashboard</a></li>
+
+                <li><a href="profile.html">Profile</a></li>
+
+                <li><a href="reports.html">Reports</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <a id="logoutLink" href="login.html" aria-label="Logout">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+        <!-- ==================== PAGE HEADER ==================== -->
+
+        <section class="dashboard-header student-page-header">
+
+            <h1>
+
+                Student Dashboard
+
+            </h1>
+
+            <p>
+
+                Monitor your academic performance, attendance, assignments and progress.
+        </section>
+
+        <!-- ==================== STATISTICS ==================== -->
+
+        <section id="studentStatistics" class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>Current GPA</h3>
+
+                <p class="stat-number" id="studentGPA">
+
+                    3.82
+
+                </p>
+
+                <p>Excellent Performance</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Attendance</h3>
+
+                <p class="stat-number" id="studentAttendance">
+
+                    95%
+
+                </p>
+
+                <p>Present This Semester</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Courses</h3>
+
+                <p class="stat-number" id="studentCourses">
+
+                    6
+
+                </p>
+
+                <p>Registered Courses</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Assignments</h3>
+
+                <p class="stat-number" id="studentAssignments">
+
+                    8
+
+                </p>
+
+                <p>Completed Tasks</p>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-toolbar" role="search">
+
+            <input type="search" id="dashboardSearch" class="dashboard-search" autocomplete="off"
+                placeholder="Search courses..." aria-label="Search Courses">
+
+            <button id="refreshDashboard" class="btn" type="button">
+
+                🔄 Refresh
+
+            </button>
+
+        </section>
+
+        <!-- ==================== MY COURSES ==================== -->
+
+        <section id="courseSection" class="table-section">
+
+            <h2>
+
+                My Courses
+
+            </h2>
+
+            <table id="courseTable">
+
+                <caption>
+
+                    Registered courses for the current semester
+
+                </caption>
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">Course Code</th>
+
+                        <th scope="col">Course Title</th>
+
+                        <th scope="col">Instructor</th>
+
+                        <th scope="col">Credit Hours</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="courseTableBody">
+
+                    <tr>
+
+                        <td>CS301</td>
+
+                        <td>Web Engineering</td>
+
+                        <td>Dr. Ahmed</td>
+
+                        <td>3</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>CS302</td>
+
+                        <td>Database Systems</td>
+
+                        <td>Dr. Ali</td>
+
+                        <td>3</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>CS303</td>
+
+                        <td>Operating Systems</td>
+
+                        <td>Dr. Khan</td>
+
+                        <td>3</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>CS304</td>
+
+                        <td>Software Engineering</td>
+
+                        <td>Dr. Fatima</td>
+
+                        <td>3</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ==================== PERFORMANCE ==================== -->
+
+        <section class="dashboard-header">
+
+            <h2>
+
+                Academic Progress
+
+            </h2>
+
+        </section>
+
+        <section id="academicProgress" class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>Attendance Progress</h3>
+
+                <progress value="95" max="100" aria-label="Attendance Progress">
+                </progress>
+
+                <p id="attendancePercent">
+
+                    95%
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Assignment Completion</h3>
+
+                <progress value="90" max="100" aria-label="Assignment Completion">
+                </progress>
+
+                <p id="assignmentPercent">
+
+                    90%
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Semester Progress</h3>
+
+                <progress value="75" max="100" aria-label="Semester Progress">
+                </progress>
+
+                <p id="semesterPercent">
+
+                    75%
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== CHARTS ==================== -->
+
+        <section class="dashboard-header">
+
+            <h2 id="performanceAnalyticsHeading">
+
+                Performance Analytics
+
+            </h2>
+
+        </section>
+
+        <section id="performanceAnalytics" class="dashboard-cards" aria-labelledby="performanceAnalyticsHeading">
+
+
+            <div class="card">
+
+                <h3>Semester GPA</h3>
+
+                <canvas id="gpaChart" role="img" aria-label="Semester GPA Chart">
+                </canvas>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Attendance</h3>
+
+                <canvas id="attendanceChart" role="img" aria-label="Attendance Chart">
+                </canvas>
+
+            </div>
+
+        </section>
+        <div id="analyticsToolbar" class="dashboard-toolbar">
+
+            <label for="chartFilter" class="visually-hidden">
+
+                Filter Analytics
+
+            </label>
+
+            <select id="chartFilter" aria-label="Filter Analytics">
+
+                <option value="semester">
+
+                    Semester
+
+                </option>
+
+                <option value="month">
+
+                    Month
+
+                </option>
+
+                <option value="week">
+
+                    Week
+
+                </option>
+
+            </select>
+
+            <button id="exportCharts" class="btn" type="button">
+
+                Export Charts
+
+            </button>
+
+            <button id="printAnalytics" class="btn" type="button">
+                Print Analytics
+
+            </button>
+
+        </div>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>
+
+                    Performance Prediction
+
+                </h3>
+
+                <p class="stat-number" id="performancePrediction">
+
+                    92%
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Top Subject
+
+                </h3>
+
+                <p id="topSubject">
+
+                    Web Engineering
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Upcoming Exams
+
+                </h3>
+
+                <p class="stat-number" id="upcomingExams">
+
+                    2
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== ASSIGNMENTS ==================== -->
+
+        <section class="table-section">
+
+
+
+            <h2>
+
+                Recent Assignments
+
+            </h2>
+
+            <br>
+
+            <table id="assignmentTable">
+
+                <caption id="assignmentTableCaption">
+                    Recent assignments submitted during the current semester
+                </caption>
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">Subject</th>
+
+                        <th scope="col">Assignment</th>
+
+                        <th scope="col">Status</th>
+
+                        <th scope="col">Deadline</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="assignmentTableBody">
+                    <tr>
+
+                        <td>Web Engineering</td>
+
+                        <td>Student Portal</td>
+
+                        <td>Completed</td>
+
+                        <td>20 July</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Database Systems</td>
+
+                        <td>SQL Queries</td>
+
+                        <td>Pending</td>
+
+                        <td>25 July</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Operating Systems</td>
+
+                        <td>Process Scheduling</td>
+
+                        <td>Completed</td>
+
+                        <td>18 July</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Software Engineering</td>
+
+                        <td>UML Diagrams</td>
+
+                        <td>In Progress</td>
+
+                        <td>28 July</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ==================== NOTIFICATION PANEL ==================== -->
+
+        <div id="notificationPanel" class="notification-panel">
+
+            <div class="notification-header">
+
+                <h3>Notifications</h3>
+
+                <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                    ✖
+
+                </button>
+
+            </div>
+
+            <input type="search" autocomplete="off" aria-label="Search Notifications" id="notificationSearch"
+                class="notification-search" placeholder="Search notifications...">
+
+            <div id="notificationList">
+
+            </div>
+
+        </div>
+        <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+
+            <div class="loader-circle"></div>
+
+            <p aria-live="polite">
+
+                Loading dashboard...
+
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

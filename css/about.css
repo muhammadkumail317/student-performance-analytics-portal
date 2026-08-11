@@ -1,0 +1,1083 @@
+/* ==============================================================
+   ABOUT.CSS
+   Student Performance Analytics Portal
+
+   About Page — Professional Page-Specific Design
+   ============================================================== */
+
+
+/* ==============================================================
+   01. ABOUT PAGE FOUNDATION
+   ============================================================== */
+
+.about-page {
+    background:
+        radial-gradient(circle at 10% 12%,
+            rgba(79, 70, 229, 0.06),
+            transparent 28%),
+        radial-gradient(circle at 90% 42%,
+            rgba(59, 130, 246, 0.045),
+            transparent 26%),
+        var(--background);
+
+    min-height:
+        100vh;
+}
+
+
+/* ==============================================================
+   02. PAGE HEADER
+   ============================================================== */
+
+.about-page #pageHeader {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        48px auto 0;
+
+    padding:
+        44px 36px;
+
+    text-align:
+        center;
+
+    background:
+        linear-gradient(135deg,
+            rgba(49, 46, 129, 0.98),
+            rgba(67, 56, 202, 0.94));
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius:
+        22px;
+
+    box-shadow:
+        0 20px 48px rgba(30, 27, 75, 0.16);
+
+    overflow:
+        hidden;
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+}
+
+
+.about-page #pageHeader::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        260px;
+
+    height:
+        260px;
+
+    top:
+        -130px;
+
+    right:
+        -80px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(129, 140, 248, 0.18);
+
+    filter:
+        blur(4px);
+
+    z-index:
+        -1;
+}
+
+
+.about-page #pageHeader::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        220px;
+
+    height:
+        220px;
+
+    bottom:
+        -130px;
+
+    left:
+        -70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(96, 165, 250, 0.12);
+
+    filter:
+        blur(5px);
+
+    z-index:
+        -1;
+}
+
+
+/* ==============================================================
+   03. PAGE TITLE
+   ============================================================== */
+
+.about-page #pageTitle {
+    margin:
+        0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(1.8rem,
+            4vw,
+            2.65rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.18;
+
+    letter-spacing:
+        -0.035em;
+}
+
+
+.about-page #pageHeader p {
+    max-width:
+        700px;
+
+    margin:
+        14px auto 0;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.78);
+
+    font-size:
+        0.82rem;
+
+    line-height:
+        1.75;
+}
+
+
+/* ==============================================================
+   04. MISSION SECTION
+   ============================================================== */
+
+.about-page #mission {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        42px auto 0;
+}
+
+
+.about-page #mission .profile-card {
+    width:
+        100%;
+
+    padding:
+        34px 38px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.about-page #mission .profile-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        4px;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(180deg,
+            var(--primary),
+            var(--primary-light));
+}
+
+
+.about-page #mission .profile-info {
+    max-width:
+        900px;
+}
+
+
+.about-page #mission .section-title {
+    margin:
+        0 0 15px;
+
+    color:
+        var(--text);
+
+    font-size:
+        1.35rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+.about-page #mission p {
+    margin:
+        0 0 12px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        0.78rem;
+
+    line-height:
+        1.85;
+}
+
+
+.about-page #mission p:last-child {
+    margin-bottom:
+        0;
+}
+
+
+/* ==============================================================
+   05. FEATURES SECTION
+   ============================================================== */
+
+/* ==============================================================
+   PORTAL FEATURES — PROFESSIONAL GRID
+   ============================================================== */
+
+.about-page #features {
+    width: min(calc(100% - 48px),
+            1080px);
+
+    margin: 42px auto 0;
+
+    display: block;
+}
+
+
+/* Section heading */
+
+.about-page #features>h2 {
+    margin: 0 0 22px;
+
+    color: var(--text);
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* Cards container */
+
+.about-page #features>.card {
+    display: inline-flex;
+    vertical-align: top;
+
+    width: calc(25% - 12px);
+
+    min-height: 205px;
+
+    margin-right: 12px;
+    margin-bottom: 12px;
+
+    padding: 24px 21px;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-sm);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+
+/* Remove margin from last card */
+
+.about-page #features>.card:last-child {
+    margin-right: 0;
+}
+
+
+/* Top accent */
+
+.about-page #features>.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            var(--primary-light));
+}
+
+
+/* Hover */
+
+.about-page #features>.card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(99, 102, 241, 0.28);
+
+    box-shadow:
+        0 16px 32px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Card title */
+
+.about-page #features>.card h3 {
+    margin: 0 0 13px;
+
+    color: var(--text);
+
+    font-size: 0.85rem;
+
+    font-weight: 650;
+
+    line-height: 1.5;
+}
+
+
+/* Card description */
+
+.about-page #features>.card p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.7rem;
+
+    line-height: 1.75;
+}
+
+
+/* ==============================================================
+   TABLET
+   ============================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-page #features>.card {
+        width: calc(50% - 8px);
+
+        margin-right: 12px;
+    }
+
+    .about-page #features>.card:nth-of-type(2n) {
+        margin-right: 0;
+    }
+}
+
+
+/* ==============================================================
+   MOBILE
+   ============================================================== */
+
+@media (max-width: 600px) {
+
+    .about-page #features {
+        width: calc(100% - 32px);
+    }
+
+    .about-page #features>h2 {
+        font-size: 1.2rem;
+
+        margin-bottom: 18px;
+    }
+
+    .about-page #features>.card {
+        display: flex;
+
+        width: 100%;
+
+        min-height: auto;
+
+        margin:
+            0 0 12px;
+    }
+
+    .about-page #features>.card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ==============================================================
+   SMALL MOBILE
+   ============================================================== */
+
+@media (max-width: 400px) {
+
+    .about-page #features {
+        width: calc(100% - 20px);
+    }
+
+}
+
+
+/* ==============================================================
+   07. TECHNOLOGIES SECTION
+   ============================================================== */
+
+.about-page #technologies {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        42px auto 0;
+
+    padding:
+        28px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.about-page #technologies h2 {
+    margin:
+        0 0 20px;
+
+    color:
+        var(--text);
+
+    font-size:
+        1.3rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* ==============================================================
+   08. TECHNOLOGY LIST
+   ============================================================== */
+
+.about-page #technologies .activity-list {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,
+            minmax(0, 1fr));
+
+    gap:
+        10px;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+.about-page #technologies .activity-list li {
+    min-width:
+        0;
+
+    min-height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        10px 13px;
+
+    color:
+        var(--text-secondary);
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        500;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+}
+
+
+.about-page #technologies .activity-list li:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(99,
+            102,
+            241,
+            0.26);
+
+    background:
+        rgba(99,
+            102,
+            241,
+            0.06);
+}
+
+
+/* ==============================================================
+   09. ADDITIONAL ABOUT SECTIONS
+   ============================================================== */
+
+.about-page main>.dashboard-header:not(#pageHeader),
+.about-page main>.activity-section:not(#technologies) {
+
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+
+}
+
+
+/*
+   This keeps future About-page sections consistent
+   without affecting dashboard.html or other pages.
+*/
+
+.about-page main>.dashboard-header:not(#pageHeader) {
+    margin-top:
+        42px;
+}
+
+
+.about-page main>.activity-section:not(#technologies) {
+    margin-top:
+        22px;
+}
+
+
+/* ==============================================================
+   10. ABOUT PAGE CARDS AFTER TECHNOLOGIES
+   ============================================================== */
+
+.about-page main>.dashboard-cards:not(#features) {
+
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        22px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+.about-page main>.dashboard-cards:not(#features) .card {
+    min-width:
+        0;
+
+    padding:
+        23px 20px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.about-page main>.dashboard-cards:not(#features) .card h3 {
+    margin:
+        0 0 10px;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.82rem;
+}
+
+
+.about-page main>.dashboard-cards:not(#features) .card p {
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.7rem;
+
+    line-height:
+        1.75;
+}
+
+
+/* ==============================================================
+   11. DARK THEME
+   ============================================================== */
+
+.dark-theme .about-page,
+.dark-theme.about-page {
+
+    background:
+        radial-gradient(circle at 10% 12%,
+            rgba(99,
+                102,
+                241,
+                0.10),
+            transparent 28%),
+        radial-gradient(circle at 90% 42%,
+            rgba(59,
+                130,
+                246,
+                0.07),
+            transparent 26%),
+        var(--background);
+}
+
+
+.dark-theme.about-page #features .card:hover {
+
+    box-shadow:
+        0 16px 34px rgba(0,
+            0,
+            0,
+            0.24);
+}
+
+
+.dark-theme.about-page #technologies .activity-list li:hover {
+
+    background:
+        rgba(99,
+            102,
+            241,
+            0.10);
+}
+
+
+/* ==============================================================
+   12. TABLET
+   ============================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-page #features {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+
+    .about-page #technologies .activity-list {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+
+    .about-page main>.dashboard-cards:not(#features) {
+
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ==============================================================
+   13. TABLET / SMALL SCREEN
+   ============================================================== */
+
+@media (max-width: 760px) {
+
+    .about-page #pageHeader,
+    .about-page #mission,
+    .about-page #features,
+    .about-page #technologies,
+    .about-page main>.dashboard-header:not(#pageHeader),
+    .about-page main>.activity-section:not(#technologies),
+    .about-page main>.dashboard-cards:not(#features) {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+
+    .about-page #pageHeader {
+
+        margin-top:
+            32px;
+
+        padding:
+            38px 26px;
+
+    }
+
+
+    .about-page #mission {
+
+        margin-top:
+            32px;
+
+    }
+
+
+    .about-page #mission .profile-card {
+
+        padding:
+            28px 28px;
+
+    }
+
+
+    .about-page #technologies {
+
+        padding:
+            24px;
+
+    }
+
+}
+
+
+/* ==============================================================
+   14. MOBILE
+   ============================================================== */
+
+@media (max-width: 600px) {
+
+    .about-page #pageHeader {
+
+        padding:
+            34px 20px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .about-page #pageTitle {
+
+        font-size:
+            clamp(1.65rem,
+                8vw,
+                2.15rem);
+
+    }
+
+
+    .about-page #pageHeader p {
+
+        font-size:
+            0.72rem;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .about-page #mission {
+
+        margin-top:
+            26px;
+
+    }
+
+
+    .about-page #mission .profile-card {
+
+        padding:
+            25px 22px;
+
+    }
+
+
+    .about-page #mission .section-title {
+
+        font-size:
+            1.2rem;
+
+    }
+
+
+    .about-page #mission p {
+
+        font-size:
+            0.72rem;
+
+        line-height:
+            1.8;
+
+    }
+
+
+    .about-page #features {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+        margin-top:
+            28px;
+
+    }
+
+
+    .about-page #features .card {
+
+        min-height:
+            auto;
+
+        padding:
+            22px 19px;
+
+    }
+
+
+    .about-page #technologies {
+
+        margin-top:
+            30px;
+
+        padding:
+            22px 18px;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .about-page #technologies h2 {
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    .about-page #technologies .activity-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .about-page main>.dashboard-cards:not(#features) {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ==============================================================
+   15. SMALL MOBILE
+   ============================================================== */
+
+@media (max-width: 400px) {
+
+    .about-page #pageHeader,
+    .about-page #mission,
+    .about-page #features,
+    .about-page #technologies,
+    .about-page main>.dashboard-header:not(#pageHeader),
+    .about-page main>.activity-section:not(#technologies),
+    .about-page main>.dashboard-cards:not(#features) {
+
+        width:
+            calc(100% - 20px);
+
+    }
+
+
+    .about-page #pageHeader {
+
+        padding:
+            30px 16px;
+
+    }
+
+
+    .about-page #mission .profile-card {
+
+        padding:
+            22px 17px;
+
+    }
+
+
+    .about-page #technologies {
+
+        padding:
+            20px 15px;
+
+    }
+
+}
+
+
+/* ==============================================================
+   16. REDUCED MOTION
+   ============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-page #features .card,
+    .about-page #technologies .activity-list li {
+
+        transition:
+            none;
+
+    }
+
+}
+
+
+/* ==============================================================
+   END — ABOUT.CSS
+   ============================================================== */

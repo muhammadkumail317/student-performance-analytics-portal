@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Administrator Dashboard of the Student Performance Analytics Portal for managing students, teachers, departments, reports, analytics, and academic performance.">
+
+    <meta name="keywords"
+        content="Administrator Dashboard, Student Portal, Student Management, Teacher Management, Analytics, Reports, Education">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Administrator Dashboard | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Administrator Dashboard Stylesheet -->
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading Dashboard...</p>
+
+    </div>
+
+
+
+    <!-- ==================== NAVIGATION ==================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="admin.html" class="logo" aria-label="Administrator Dashboard">
+
+                Student Portal
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Administrator Navigation">
+
+                <li><a href="admin.html" class="active">Dashboard</a></li>
+
+                <li><a href="profile.html">Profile</a></li>
+
+                <li><a href="reports.html">Reports</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <a id="logoutLink" href="login.html">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+        <!-- ==================== PAGE TITLE ==================== -->
+
+        <section id="adminHeader" class="dashboard-header" aria-labelledby="adminTitle">
+
+            <h1 id="adminTitle">
+
+                Administrator Dashboard
+
+            </h1>
+
+            <p>
+
+                Manage the entire Student Performance Analytics Portal.
+
+            </p>
+
+        </section>
+
+        <!-- ==================== STATISTICS ==================== -->
+
+        <section id="statisticsCards" class="dashboard-cards" aria-labelledby="adminTitle">
+
+            <article class="card">
+
+                <h3>Total Students</h3>
+
+                <h1 id="totalStudents">250</h1>
+
+                <p>Registered Students</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Total Teachers</h3>
+
+                <h1 id="totalTeachers">35</h1>
+
+                <p>Faculty Members</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Departments</h3>
+
+                <h1 id="totalDepartments">4</h1>
+
+                <p>Active Departments</p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Courses</h3>
+
+                <h1 id="totalCourses">42</h1>
+
+                <p>Available Courses</p>
+
+            </article>
+
+        </section>
+
+
+        <section class="dashboard-toolbar">
+
+            <input type="search" id="dashboardSearch" class="dashboard-search" placeholder="Search students..."
+                autocomplete="off" aria-label="Search Students">
+
+            <button id="refreshDashboard" class="btn" type="button">
+
+                🔄 Refresh
+
+            </button>
+
+        </section>
+
+        <!-- ==================== QUICK ACTIONS ==================== -->
+
+        <section id="quickActionsHeader" class="dashboard-header" aria-labelledby="quickActionsTitle">
+
+            <h2 id="quickActionsTitle">
+
+                Quick Actions
+
+            </h2>
+
+        </section>
+
+        <section id="quickActions" class="dashboard-cards" aria-labelledby="quickActionsTitle">
+
+            <article class="card">
+
+                <h3>👨‍🎓 Student Management</h3>
+
+                <p>
+
+                    Add, Update and Remove Student Records.
+
+                </p>
+
+                <button id="manageStudentsBtn" class="btn" type="button">
+
+                    Manage
+
+                </button>
+
+            </article>
+
+            <article class="card">
+
+                <h3>👨‍🏫 Teacher Management</h3>
+
+                <p>
+
+                    Maintain Teacher Information.
+
+                </p>
+
+                <button id="manageTeachersBtn" class="btn" type="button">
+
+                    Manage
+
+                </button>
+
+            </article>
+
+            <article class="card">
+
+                <h3>🏢 Department Management</h3>
+
+                <p>
+
+                    Manage Academic Departments.
+
+                </p>
+
+                <button id="manageDepartmentsBtn" class="btn" type="button">
+                    Manage
+
+                </button>
+
+            </article>
+
+            <article class="card">
+
+                <h3>📊 Generate Reports</h3>
+
+                <p>
+
+                    Export Student Performance Reports.
+
+                </p>
+
+                <button id="generateReportsBtn" class="btn" type="button">
+
+                    Open
+
+                </button>
+
+            </article>
+
+        </section>
+
+        <!-- ==================== STUDENT TABLE ==================== -->
+
+        <section id="studentRecords" class="table-section" aria-labelledby="studentRecordsTitle">
+
+            <h2 id="studentRecordsTitle">
+
+                Recent Student Records
+
+            </h2>
+
+            <br>
+
+            <table id="studentTable" aria-describedby="studentRecordsTitle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Department</th>
+
+                        <th>CGPA</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTableBody">
+
+                    <tr>
+
+                        <td>SP001</td>
+
+                        <td>Muhammad Kumail</td>
+
+                        <td>Computer Science</td>
+
+                        <td>3.82</td>
+
+                        <td>Excellent</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP002</td>
+
+                        <td>Ali Khan</td>
+
+                        <td>Software Engineering</td>
+
+                        <td>3.54</td>
+
+                        <td>Good</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP003</td>
+
+                        <td>Fatima Noor</td>
+
+                        <td>Information Technology</td>
+
+                        <td>3.73</td>
+
+                        <td>Excellent</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>SP004</td>
+
+                        <td>Ahmed Raza</td>
+
+                        <td>Artificial Intelligence</td>
+
+                        <td>3.41</td>
+
+                        <td>Good</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ==================== ANALYTICS ==================== -->
+
+        <section id="analyticsHeader" class="dashboard-header" aria-labelledby="analyticsTitle">
+
+            <h2 id="analyticsTitle">
+
+                Portal Analytics
+
+            </h2>
+
+        </section>
+
+        <section id="analyticsCards" class="dashboard-cards" aria-labelledby="analyticsTitle">
+
+            <article class="card">
+
+                <h3>Departments</h3>
+
+                <canvas id="departmentChart"></canvas>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Performance</h3>
+
+                <canvas id="performanceChart"></canvas>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Attendance</h3>
+
+                <canvas id="attendanceChart"></canvas>
+
+            </article>
+
+        </section>
+
+        <section id="performanceSummary" class="dashboard-cards" aria-labelledby="analyticsTitle">
+
+            <article class="card">
+
+                <h3>Current Attendance</h3>
+
+                <h2 id="attendanceRate">
+
+                    95%
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Overall Performance</h3>
+
+                <h2 id="performanceRate">
+
+                    91%
+
+                </h2>
+
+            </article>
+
+        </section>
+
+        <section id="chartToolbar" class="dashboard-toolbar" aria-label="Chart Controls">
+
+            <select id="chartFilter" aria-label="Chart Time Filter">
+
+                <option value="year">
+
+                    Year
+
+                </option>
+
+                <option value="month">
+
+                    Month
+
+                </option>
+
+                <option value="week">
+
+                    Week
+
+                </option>
+
+            </select>
+
+            <button id="exportChart" class="btn" type="button">
+
+                Export Chart
+
+            </button>
+
+            <button id="compareTarget" class="btn" type="button">
+
+                Compare Target
+
+            </button>
+
+            <button id="resetChart" class="btn" type="button">
+
+                Reset
+
+            </button>
+            <button id="refreshAnalytics" class="btn" type="button">
+
+                Refresh Analytics
+
+            </button>
+
+        </section>
+
+        <section id="topPerformerSection" class="dashboard-cards" aria-labelledby="analyticsTitle">
+
+            <article class="card">
+
+                <h3>
+
+                    Performance Prediction
+
+                </h3>
+
+                <h2 id="performancePrediction">
+
+                    0%
+
+                </h2>
+
+            </article>
+
+            <article class="card">
+
+                <h3>
+
+                    Top Performers
+
+                </h3>
+
+                <div id="topPerformers">
+
+                </div>
+
+            </article>
+
+        </section>
+        <section id="analyticsActions" class="dashboard-toolbar" aria-label="Analytics Actions">
+
+            <button id="exportAllCharts" class="btn" type="button">
+
+                Export All Charts
+
+            </button>
+
+            <button id="printDashboard" class="btn" type="button">
+
+                Print Dashboard
+
+            </button>
+
+            <input type="file" id="chartImport" accept=".json" aria-label="Import Chart Data">
+
+        </section>
+
+        <!-- ==================== NOTIFICATION PANEL ==================== -->
+
+        <aside id="notificationPanel" class="notification-panel" aria-hidden="true">
+
+            <div class="notification-header">
+
+                <h3>
+
+                    Notifications
+
+                </h3>
+
+                <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                    ✖
+
+                </button>
+
+            </div>
+            <input type="search" id="notificationSearch" class="notification-search"
+                placeholder="Search notifications..." autocomplete="off" aria-label="Search Notifications">
+
+            <div id="notificationList">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to Top">
+
+        ↑
+
+    </button>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,779 @@
+/* =========================================================
+   TEACHER.CSS
+   Student Performance Analytics Portal
+   Teacher Dashboard
+   ========================================================= */
+
+
+/* =========================================================
+   1. TEACHER PAGE FOUNDATION
+   ========================================================= */
+
+.teacher-page {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   2. MAIN TEACHER PAGE HEADER
+   ========================================================= */
+
+.portal-page-header {
+    width: min(1100px, calc(100% - 40px));
+    margin: 35px auto 30px;
+
+    padding: 42px 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(49, 46, 129, 0.96),
+            rgba(67, 56, 202, 0.92));
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 40px rgba(49, 46, 129, 0.22);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decorative glow */
+
+.portal-page-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+.portal-page-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    bottom: -100px;
+    left: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    pointer-events: none;
+}
+
+
+.portal-page-header h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 12px;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+
+.portal-page-header p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 auto;
+
+    max-width: 760px;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.90);
+}
+
+
+/* =========================================================
+   3. TEACHER STATISTICS
+   ========================================================= */
+
+#teacherStatistics {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+#teacherStatistics .card {
+    position: relative;
+
+    padding: 26px 22px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#teacherStatistics .card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+#teacherStatistics .card h3 {
+    margin-bottom: 12px;
+}
+
+
+#teacherStatistics .stat-number {
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   4. TEACHER SEARCH / TOOLBAR
+   ========================================================= */
+
+#main-content>.dashboard-toolbar {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+#main-content>.dashboard-toolbar .dashboard-search {
+    flex: 1;
+
+    min-width: 250px;
+}
+
+
+/* =========================================================
+   5. TEACHER ACTIVITIES HEADER
+   ========================================================= */
+
+#teacherActivities {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+#teacherActivities+.table-section {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   6. TEACHER ACTIVITY CARDS
+   ========================================================= */
+
+#teacherActivities .card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 28px 22px;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#teacherActivities .card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(49, 46, 129, 0.14);
+}
+
+
+#teacherActivities .card h3 {
+    margin-bottom: 12px;
+}
+
+
+#teacherActivities .card p {
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+}
+
+
+#teacherActivities .card .btn {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   7. MY STUDENTS TABLE
+   ========================================================= */
+
+#studentTableSection {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 45px;
+
+    overflow-x: auto;
+}
+
+
+#studentTableSection h2 {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+
+#studentTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+
+#studentTable caption {
+    caption-side: top;
+
+    padding: 12px;
+
+    font-size: 0.9rem;
+
+    text-align: center;
+}
+
+
+#studentTable th,
+#studentTable td {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+
+#studentTable th {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   8. CLASS ANALYTICS
+   ========================================================= */
+
+#teacherAnalytics {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 25px;
+
+    display: block;
+}
+
+
+#teacherAnalytics>h2 {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+
+/* Inner analytics cards */
+
+#teacherAnalytics>.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+#teacherAnalytics .card {
+    min-height: 350px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 18px;
+}
+
+
+#teacherAnalytics .card h3 {
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+#teacherAnalytics canvas {
+    width: 100% !important;
+
+    max-width: 600px;
+
+    max-height: 280px;
+}
+
+
+/* =========================================================
+   9. ANALYTICS TOOLBAR
+   ========================================================= */
+
+#analyticsToolbar {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+#analyticsToolbar select {
+    min-width: 150px;
+}
+
+
+/* =========================================================
+   10. ANALYTICS SUMMARY CARDS
+   ========================================================= */
+
+#analyticsToolbar+.dashboard-cards {
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+#analyticsToolbar+.dashboard-cards .card {
+    text-align: center;
+
+    padding: 26px 20px;
+
+    border-radius: 18px;
+}
+
+
+#analyticsToolbar+.dashboard-cards h3 {
+    margin-bottom: 12px;
+}
+
+
+#analyticsToolbar+.dashboard-cards .stat-number {
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   11. NOTIFICATION PANEL
+   ========================================================= */
+
+#notificationPanel {
+    z-index: 1000;
+}
+
+
+#notificationPanel .notification-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+#notificationPanel .notification-header h3 {
+    margin: 0;
+}
+
+
+#notificationSearch {
+    width: 100%;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   12. LOADING OVERLAY
+   ========================================================= */
+
+#loadingOverlay {
+    z-index: 2000;
+}
+
+
+#loadingOverlay .loader-circle {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   13. DARK MODE
+   ========================================================= */
+
+body.dark-mode .portal-page-header {
+    background:
+        linear-gradient(135deg,
+            #1e1b4b,
+            #312e81);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+body.dark-mode #teacherStatistics .card,
+body.dark-mode #teacherActivities .card,
+body.dark-mode #teacherAnalytics .card,
+body.dark-mode #analyticsToolbar+.dashboard-cards .card {
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+body.dark-mode #teacherStatistics .card:hover,
+body.dark-mode #teacherActivities .card:hover {
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   14. TABLE RESPONSIVE WRAPPER
+   ========================================================= */
+
+#studentTableSection::-webkit-scrollbar {
+    height: 8px;
+}
+
+
+#studentTableSection::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   15. TABLET RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    #teacherStatistics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    #teacherActivities {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    #analyticsToolbar+.dashboard-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    #analyticsToolbar+.dashboard-cards .card:last-child {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   16. MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .portal-page-header {
+        width: calc(100% - 30px);
+
+        margin-top: 25px;
+
+        padding: 32px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .portal-page-header h1 {
+        font-size: 2rem;
+    }
+
+
+    .portal-page-header p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
+
+    #teacherStatistics,
+    #teacherActivities,
+    #analyticsToolbar+.dashboard-cards {
+        width: calc(100% - 30px);
+    }
+
+
+    #teacherStatistics {
+        grid-template-columns: 1fr;
+    }
+
+
+    #teacherActivities {
+        grid-template-columns: 1fr;
+    }
+
+
+    #teacherAnalytics {
+        width: calc(100% - 30px);
+    }
+
+
+    #teacherAnalytics>.dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    #teacherAnalytics .card {
+        min-height: 300px;
+    }
+
+
+    #analyticsToolbar {
+        width: calc(100% - 30px);
+
+        justify-content: stretch;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #analyticsToolbar select,
+    #analyticsToolbar .btn {
+        width: 100%;
+    }
+
+
+    #analyticsToolbar+.dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    #analyticsToolbar+.dashboard-cards .card:last-child {
+        grid-column: auto;
+    }
+
+
+    #main-content>.dashboard-toolbar {
+        width: calc(100% - 30px);
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #main-content>.dashboard-toolbar .dashboard-search {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    #main-content>.dashboard-toolbar .btn {
+        width: 100%;
+    }
+
+
+    #studentTableSection {
+        width: calc(100% - 30px);
+    }
+
+
+    #studentTable th,
+    #studentTable td {
+        padding: 11px 12px;
+
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .portal-page-header {
+        padding: 28px 16px;
+    }
+
+
+    .portal-page-header h1 {
+        font-size: 1.7rem;
+    }
+
+
+    .portal-page-header p {
+        font-size: 0.88rem;
+    }
+
+
+    #teacherStatistics .card,
+    #teacherActivities .card,
+    #teacherAnalytics .card,
+    #analyticsToolbar+.dashboard-cards .card {
+        padding: 22px 16px;
+    }
+
+
+    #teacherAnalytics>h2,
+    #studentTableSection h2 {
+        font-size: 1.5rem;
+    }
+
+
+    #studentTable {
+        min-width: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITY
+   ========================================================= */
+
+#teacherStatistics .card:focus-within,
+#teacherActivities .card:focus-within {
+    outline: 2px solid #6366f1;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #teacherStatistics .card,
+    #teacherActivities .card {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
+   END OF TEACHER.CSS
+   ========================================================= */

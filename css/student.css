@@ -1,0 +1,820 @@
+/* =========================================================
+   STUDENT.CSS
+   Student Dashboard
+   Student Performance Analytics Portal
+   Developed by Muhammad Kumail Noor
+   ========================================================= */
+
+
+/* =========================================================
+   1. STUDENT DASHBOARD PAGE FOUNDATION
+   ========================================================= */
+
+.student-dashboard {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   2. STUDENT PAGE HEADER
+   ========================================================= */
+
+.student-page-header {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(49, 46, 129, 0.95),
+            rgba(67, 56, 202, 0.88));
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(49, 46, 129, 0.18);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.student-page-header::before {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.student-page-header::after {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    bottom: -100px;
+    left: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.student-page-header h1,
+.student-page-header p {
+    position: relative;
+    z-index: 1;
+}
+
+.student-page-header h1 {
+    margin: 0 0 0.6rem;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+}
+
+.student-page-header p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   3. STUDENT STATISTICS
+   ========================================================= */
+
+#studentStatistics {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 1.25rem;
+}
+
+#studentStatistics .card {
+    position: relative;
+
+    padding: 1.6rem;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#studentStatistics .card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+#studentStatistics .card h3 {
+    margin-bottom: 0.7rem;
+
+    font-size: 1rem;
+}
+
+#studentStatistics .card .stat-number {
+    margin: 0.4rem 0;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #312e81;
+}
+
+#studentStatistics .card p:last-child {
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   4. STUDENT DASHBOARD TOOLBAR
+   ========================================================= */
+
+.student-dashboard-toolbar {
+    width: min(1200px, 92%);
+    margin: 1.5rem auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+.student-dashboard-toolbar .dashboard-search {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   5. COURSE TABLE SECTION
+   ========================================================= */
+
+#courseSection {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    padding: 1.5rem;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+}
+
+#courseSection h2 {
+    margin-bottom: 1.2rem;
+
+    font-size: 1.5rem;
+}
+
+#courseTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+#courseTable caption {
+    margin-bottom: 1rem;
+
+    text-align: left;
+
+    font-size: 0.9rem;
+
+    opacity: 0.75;
+}
+
+#courseTable th,
+#courseTable td {
+    padding: 1rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+#courseTable th {
+    font-weight: 600;
+
+    background: rgba(49, 46, 129, 0.08);
+}
+
+#courseTable tbody tr {
+    transition:
+        background 0.2s ease;
+}
+
+#courseTable tbody tr:hover {
+    background: rgba(49, 46, 129, 0.05);
+}
+
+
+/* =========================================================
+   6. ACADEMIC PROGRESS
+   ========================================================= */
+
+#academicProgress {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1.25rem;
+}
+
+#academicProgress .card {
+    padding: 1.5rem;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+#academicProgress .card h3 {
+    margin-bottom: 1rem;
+}
+
+#academicProgress progress {
+    width: 100%;
+    height: 12px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#academicProgress progress::-webkit-progress-bar {
+    background: rgba(128, 128, 128, 0.2);
+
+    border-radius: 20px;
+}
+
+#academicProgress progress::-webkit-progress-value {
+    background: #312e81;
+
+    border-radius: 20px;
+}
+
+#academicProgress progress::-moz-progress-bar {
+    background: #312e81;
+
+    border-radius: 20px;
+}
+
+#academicProgress .card p {
+    margin-top: 0.8rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   7. PERFORMANCE ANALYTICS
+   ========================================================= */
+
+#performanceAnalytics {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
+}
+
+#performanceAnalytics .card {
+    min-height: 350px;
+
+    padding: 1.5rem;
+
+    border-radius: 18px;
+}
+
+#performanceAnalytics .card h3 {
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+#performanceAnalytics canvas {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100%;
+
+    height: 280px !important;
+}
+
+
+/* =========================================================
+   8. ANALYTICS TOOLBAR
+   ========================================================= */
+
+#analyticsToolbar {
+    width: min(1200px, 92%);
+    margin: 1.5rem auto;
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+}
+
+#chartFilter {
+    min-width: 150px;
+
+    padding: 0.75rem 1rem;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   9. ANALYTICS SUMMARY CARDS
+   ========================================================= */
+
+#performanceAnalytics+.dashboard-cards {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1.25rem;
+}
+
+#performanceAnalytics+.dashboard-cards .card {
+    padding: 1.5rem;
+
+    text-align: center;
+
+    border-radius: 18px;
+}
+
+#performanceAnalytics+.dashboard-cards .stat-number {
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #312e81;
+}
+
+
+/* =========================================================
+   10. ASSIGNMENTS TABLE
+   ========================================================= */
+
+#assignmentTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+#assignmentTable th,
+#assignmentTable td {
+    padding: 1rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+#assignmentTable th {
+    font-weight: 600;
+
+    background: rgba(49, 46, 129, 0.08);
+}
+
+#assignmentTable tbody tr {
+    transition:
+        background 0.2s ease;
+}
+
+#assignmentTable tbody tr:hover {
+    background: rgba(49, 46, 129, 0.05);
+}
+
+
+/* =========================================================
+   11. ASSIGNMENT STATUS
+   ========================================================= */
+
+#assignmentTable td:nth-child(3) {
+    font-weight: 600;
+}
+
+#assignmentTable td:nth-child(3)::first-letter {
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   12. STUDENT TABLE SECTION
+   ========================================================= */
+
+.student-table-section {
+    width: min(1200px, 92%);
+    margin: 2rem auto;
+
+    padding: 1.5rem;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+}
+
+.student-table-section h2 {
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   13. DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .student-page-header {
+    background:
+        linear-gradient(135deg,
+            rgba(49, 46, 129, 0.95),
+            rgba(30, 27, 75, 0.95));
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] #studentStatistics .card .stat-number,
+[data-theme="dark"] #performanceAnalytics+.dashboard-cards .stat-number {
+    color: #a5b4fc;
+}
+
+[data-theme="dark"] #courseTable th,
+[data-theme="dark"] #assignmentTable th {
+    background: rgba(129, 140, 248, 0.12);
+}
+
+[data-theme="dark"] #courseTable tbody tr:hover,
+[data-theme="dark"] #assignmentTable tbody tr:hover {
+    background: rgba(129, 140, 248, 0.08);
+}
+
+[data-theme="dark"] #academicProgress progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] #academicProgress progress::-webkit-progress-value {
+    background: #818cf8;
+}
+
+[data-theme="dark"] #academicProgress progress::-moz-progress-bar {
+    background: #818cf8;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE — TABLETS
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    #studentStatistics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    #academicProgress {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    #performanceAnalytics {
+        grid-template-columns:
+            1fr;
+    }
+
+    #performanceAnalytics+.dashboard-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   15. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .student-page-header {
+        width: 94%;
+
+        padding: 2rem 1.25rem;
+
+        margin: 1.5rem auto;
+    }
+
+    .student-page-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .student-page-header p {
+        font-size: 0.9rem;
+    }
+
+    #studentStatistics,
+    #academicProgress,
+    #performanceAnalytics,
+    #performanceAnalytics+.dashboard-cards {
+        width: 94%;
+    }
+
+    #studentStatistics {
+        grid-template-columns: 1fr;
+    }
+
+    #academicProgress {
+        grid-template-columns: 1fr;
+    }
+
+    #performanceAnalytics+.dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .student-dashboard-toolbar {
+        width: 94%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .student-dashboard-toolbar .btn {
+        width: 100%;
+    }
+
+    #analyticsToolbar {
+        width: 94%;
+
+        justify-content: stretch;
+
+        flex-direction: column;
+    }
+
+    #analyticsToolbar select,
+    #analyticsToolbar button {
+        width: 100%;
+    }
+
+    #courseSection,
+    .student-table-section {
+        width: 94%;
+
+        padding: 1rem;
+    }
+
+    #performanceAnalytics .card {
+        min-height: 300px;
+
+        padding: 1rem;
+    }
+
+    #performanceAnalytics canvas {
+        height: 240px !important;
+    }
+
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .student-page-header {
+        padding: 1.5rem 1rem;
+
+        border-radius: 15px;
+    }
+
+    .student-page-header h1 {
+        font-size: 1.45rem;
+    }
+
+    .student-page-header p {
+        font-size: 0.82rem;
+    }
+
+    #studentStatistics .card {
+        padding: 1.25rem;
+    }
+
+    #studentStatistics .card .stat-number {
+        font-size: 1.7rem;
+    }
+
+    #academicProgress .card {
+        padding: 1.25rem;
+    }
+
+    #performanceAnalytics .card {
+        min-height: 270px;
+    }
+
+    #performanceAnalytics canvas {
+        height: 210px !important;
+    }
+
+}
+
+
+/* =========================================================
+   17. ACCESSIBILITY
+   ========================================================= */
+
+#studentStatistics .card:focus-within,
+#academicProgress .card:focus-within,
+#performanceAnalytics .card:focus-within {
+    outline: 2px solid #6366f1;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   18. PRINT
+   ========================================================= */
+
+@media print {
+
+    .site-header,
+    .notification-panel,
+    .dashboard-toolbar,
+    #analyticsToolbar,
+    .site-footer {
+        display: none !important;
+    }
+
+    .student-page-header {
+        color: #000000;
+
+        background: none !important;
+
+        box-shadow: none;
+    }
+
+    #performanceAnalytics canvas {
+        max-height: 300px;
+    }
+
+    #courseSection,
+    #academicProgress,
+    #performanceAnalytics,
+    .student-table-section {
+        width: 100%;
+
+        margin: 1rem 0;
+    }
+
+}
+
+
+/* =========================================================
+   STUDENT PAGE HEADER — CENTER ALIGNMENT
+   ========================================================= */
+
+.student-page-header {
+    text-align: center;
+}
+
+.student-page-header h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-page-header p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* =========================================================
+   STUDENT DASHBOARD SECTION HEADERS — CENTER ALIGNMENT
+   ========================================================= */
+
+/* My Courses */
+#courseSection h2 {
+    text-align: center;
+}
+
+/* My Courses subtitle / caption */
+#courseTable caption {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Academic Progress */
+#academicProgress {
+    text-align: center;
+}
+
+
+/* Performance Analytics */
+#performanceAnalyticsHeading {
+    text-align: center;
+}
+
+
+/* Recent Assignments */
+#assignmentTableCaption {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-section>h2 {
+    text-align: center;
+}
+
+/* =========================================================
+   ACADEMIC PROGRESS HEADER — CENTER
+   ========================================================= */
+
+#academicProgress {
+    text-align: center;
+}
+
+/* Center the header containing "Academic Progress" */
+.dashboard-header:has(+ #academicProgress) {
+    text-align: center;
+}
+
+.dashboard-header:has(+ #academicProgress) h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

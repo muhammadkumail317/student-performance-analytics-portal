@@ -1,0 +1,1060 @@
+/* ==============================================================
+   INDEX.CSS
+   Student Performance Analytics Portal
+   Home Page — Professional Page-Specific Design
+   ============================================================== */
+
+
+/* ==============================================================
+   01. HOME PAGE FOUNDATION
+   ============================================================== */
+
+body {
+    background:
+        radial-gradient(circle at 15% 10%,
+            rgba(79, 70, 229, 0.07),
+            transparent 28%),
+        radial-gradient(circle at 85% 25%,
+            rgba(59, 130, 246, 0.05),
+            transparent 25%),
+        var(--background);
+}
+
+
+/* ==============================================================
+   02. HERO SECTION
+   ============================================================== */
+
+.hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: min(calc(100% - 48px),
+            1080px);
+
+    min-height: 500px;
+
+    margin: 42px auto 0;
+    padding: 72px 48px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(135deg,
+            rgba(49, 46, 129, 0.98),
+            rgba(67, 56, 202, 0.94));
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius:
+        28px;
+
+    box-shadow:
+        0 24px 60px rgba(30, 27, 75, 0.20);
+
+    overflow:
+        hidden;
+
+    isolation:
+        isolate;
+}
+
+
+/* Decorative glow */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: -140px;
+    right: -120px;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(129, 140, 248, 0.22);
+
+    filter:
+        blur(10px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -180px;
+    left: -130px;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(96, 165, 250, 0.14);
+
+    filter:
+        blur(12px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+}
+
+
+/* ==============================================================
+   03. HERO HEADING
+   ============================================================== */
+
+.hero h1 {
+    position: relative;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(2rem,
+            5vw,
+            3.45rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.12;
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+/* ==============================================================
+   04. HERO DESCRIPTION
+   ============================================================== */
+
+.hero>p {
+    max-width:
+        760px;
+
+    margin:
+        22px auto 0;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.82);
+
+    font-size:
+        0.92rem;
+
+    line-height:
+        1.8;
+}
+
+
+/* ==============================================================
+   05. HERO BUTTON GROUP
+   ============================================================== */
+
+.hero-buttons {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        30px;
+}
+
+
+/* ==============================================================
+   06. HERO PRIMARY BUTTON
+   ============================================================== */
+
+.hero-buttons .btn {
+    min-width:
+        145px;
+
+    padding:
+        11px 20px;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.14);
+
+    border-radius:
+        10px;
+
+    background:
+        #ffffff;
+
+    color:
+        #312e81;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+    box-shadow:
+        0 8px 20px rgba(0,
+            0,
+            0,
+            0.12);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background-color 180ms ease;
+}
+
+
+.hero-buttons .btn:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 26px rgba(0,
+            0,
+            0,
+            0.18);
+
+    background:
+        #f8fafc;
+}
+
+
+/* ==============================================================
+   07. HERO SECONDARY BUTTON
+   ============================================================== */
+
+.hero-buttons .secondary-btn {
+    background:
+        rgba(255,
+            255,
+            255,
+            0.08);
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(255,
+            255,
+            255,
+            0.24);
+
+    box-shadow:
+        none;
+}
+
+
+.hero-buttons .secondary-btn:hover {
+    background:
+        rgba(255,
+            255,
+            255,
+            0.15);
+
+    color:
+        #ffffff;
+}
+
+
+/* ==============================================================
+   08. HOME SECTION HEADERS
+   ============================================================== */
+
+#featuresSection,
+#overviewSection {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+}
+
+
+#featuresSection {
+    margin-top:
+        64px;
+}
+
+
+#overviewSection {
+    margin-top:
+        64px;
+}
+
+
+#featuresSection h2,
+#overviewSection h2,
+#whySection h2 {
+    margin:
+        0;
+
+    color:
+        var(--text);
+
+    font-size:
+        clamp(1.45rem,
+            3vw,
+            1.9rem);
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+#featuresSection p {
+    margin:
+        8px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.78rem;
+}
+
+
+/* ==============================================================
+   09. FEATURE CARDS
+   ============================================================== */
+
+#featureCards {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        22px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+#featureCards .card {
+    position:
+        relative;
+
+    min-height:
+        190px;
+
+    padding:
+        24px 20px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+
+#featureCards .card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(99,
+            102,
+            241,
+            0.30);
+
+    box-shadow:
+        0 14px 30px rgba(15,
+            23,
+            42,
+            0.10);
+}
+
+
+#featureCards .card h3 {
+    margin:
+        0 0 12px;
+
+    color:
+        var(--text);
+
+    font-size:
+        0.88rem;
+
+    line-height:
+        1.45;
+}
+
+
+#featureCards .card p {
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.7rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* ==============================================================
+   10. OVERVIEW CARDS
+   ============================================================== */
+
+#overviewCards {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        22px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,
+            minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+#overviewCards .card {
+    padding:
+        22px;
+
+    text-align:
+        center;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+
+#overviewCards .card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+#overviewCards .card h3 {
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        600;
+}
+
+
+#overviewCards .card h2 {
+    margin:
+        9px 0 0;
+
+    color:
+        var(--primary-light);
+
+    font-size:
+        1.8rem;
+
+    font-weight:
+        700;
+}
+
+
+/* ==============================================================
+   11. WHY CHOOSE SECTION
+   ============================================================== */
+
+#whySection {
+    width:
+        min(calc(100% - 48px),
+            1080px);
+
+    margin:
+        64px auto 60px;
+
+    padding:
+        28px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+#whySection h2 {
+    margin-bottom:
+        18px;
+}
+
+
+/* ==============================================================
+   12. WHY CHOOSE LIST
+   ============================================================== */
+
+#whySection .activity-list {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,
+            minmax(0, 1fr));
+
+    gap:
+        10px 14px;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+#whySection .activity-list li {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    min-height:
+        42px;
+
+    padding:
+        9px 12px;
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        9px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        0.7rem;
+
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+}
+
+
+#whySection .activity-list li:hover {
+    transform:
+        translateY(-1px);
+
+    border-color:
+        rgba(99,
+            102,
+            241,
+            0.25);
+
+    background:
+        rgba(99,
+            102,
+            241,
+            0.06);
+}
+
+
+/* ==============================================================
+   13. HOME PAGE NOTIFICATION PANEL
+   ============================================================== */
+
+body>.notification-panel,
+main>.notification-panel {
+    z-index:
+        1000;
+}
+
+
+/* ==============================================================
+   14. SCROLL TO TOP
+   ============================================================== */
+
+.scroll-top-btn {
+    position:
+        fixed;
+
+    right:
+        22px;
+
+    bottom:
+        22px;
+
+    z-index:
+        900;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    padding:
+        0;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 8px 22px rgba(49,
+            46,
+            129,
+            0.25);
+
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease,
+        background-color 180ms ease;
+}
+
+
+.scroll-top-btn:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        var(--primary-dark);
+}
+
+
+/* ==============================================================
+   15. DARK THEME — HOME
+   ============================================================== */
+
+.dark-theme body {
+    background:
+        radial-gradient(circle at 15% 10%,
+            rgba(99,
+                102,
+                241,
+                0.10),
+            transparent 28%),
+        radial-gradient(circle at 85% 25%,
+            rgba(59,
+                130,
+                246,
+                0.07),
+            transparent 25%),
+        var(--background);
+}
+
+
+.dark-theme #featureCards .card:hover,
+.dark-theme #overviewCards .card:hover {
+    box-shadow:
+        0 16px 32px rgba(0,
+            0,
+            0,
+            0.22);
+}
+
+
+.dark-theme #whySection .activity-list li:hover {
+    background:
+        rgba(99,
+            102,
+            241,
+            0.10);
+}
+
+
+/* ==============================================================
+   16. TABLET
+   ============================================================== */
+
+@media (max-width: 1000px) {
+
+    #featureCards {
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+    }
+
+
+    #overviewCards {
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+    }
+
+
+    #whySection .activity-list {
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==============================================================
+   17. SMALL TABLET
+   ============================================================== */
+
+@media (max-width: 760px) {
+
+    .hero {
+        width:
+            calc(100% - 32px);
+
+        min-height:
+            450px;
+
+        padding:
+            58px 30px;
+
+        border-radius:
+            22px;
+    }
+
+
+    #featuresSection,
+    #overviewSection,
+    #featureCards,
+    #overviewCards,
+    #whySection {
+        width:
+            calc(100% - 32px);
+    }
+
+
+    #whySection {
+        padding:
+            22px;
+    }
+
+}
+
+
+/* ==============================================================
+   18. MOBILE
+   ============================================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height:
+            420px;
+
+        margin-top:
+            28px;
+
+        padding:
+            48px 22px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(1.8rem,
+                9vw,
+                2.45rem);
+    }
+
+
+    .hero>p {
+        margin-top:
+            17px;
+
+        font-size:
+            0.75rem;
+
+        line-height:
+            1.75;
+    }
+
+
+    .hero-buttons {
+        width:
+            100%;
+
+        margin-top:
+            24px;
+
+        flex-direction:
+            column;
+    }
+
+
+    .hero-buttons .btn {
+        width:
+            min(100%,
+                280px);
+    }
+
+
+    #featuresSection,
+    #overviewSection {
+        margin-top:
+            48px;
+    }
+
+
+    #featureCards {
+        grid-template-columns:
+            1fr;
+
+        margin-top:
+            18px;
+    }
+
+
+    #overviewCards {
+        grid-template-columns:
+            repeat(2,
+                minmax(0, 1fr));
+
+        gap:
+            10px;
+
+        margin-top:
+            18px;
+    }
+
+
+    #overviewCards .card {
+        padding:
+            18px 12px;
+    }
+
+
+    #overviewCards .card h2 {
+        font-size:
+            1.5rem;
+    }
+
+
+    #whySection {
+        margin-top:
+            48px;
+
+        margin-bottom:
+            42px;
+
+        padding:
+            20px;
+    }
+
+
+    #whySection .activity-list {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .scroll-top-btn {
+        right:
+            14px;
+
+        bottom:
+            14px;
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+}
+
+
+/* ==============================================================
+   19. SMALL MOBILE
+   ============================================================== */
+
+@media (max-width: 400px) {
+
+    .hero {
+        width:
+            calc(100% - 20px);
+
+        padding:
+            42px 17px;
+    }
+
+
+    #featuresSection,
+    #overviewSection,
+    #featureCards,
+    #overviewCards,
+    #whySection {
+        width:
+            calc(100% - 20px);
+    }
+
+
+    #overviewCards {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    #whySection {
+        padding:
+            17px;
+    }
+
+}
+
+
+/* ==============================================================
+   20. REDUCED MOTION
+   ============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-buttons .btn,
+    #featureCards .card,
+    #overviewCards .card,
+    #whySection .activity-list li,
+    .scroll-top-btn {
+        transition:
+            none;
+    }
+
+}
+
+
+/* ==============================================================
+   END — INDEX PAGE PART 1
+   ============================================================== */

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="View, analyze, filter, and export student performance reports through the Student Performance Analytics Portal.">
+
+    <meta name="keywords"
+        content="Student Reports, Performance Reports, Analytics Dashboard, GPA Reports, Attendance Reports, Student Performance Analytics Portal">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Performance Reports | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/report.css">
+
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+
+        <nav class="navbar" role="navigation">
+
+            <a href="dashboard.html" class="logo" aria-label="Student Performance Analytics Portal">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links">
+
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+                        🌙 Theme
+                    </button>
+                </li>
+
+                <li>
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+                        🔔 Notifications
+                    </button>
+                </li>
+
+                <li>
+                    <a id="logoutLink" href="login.html" aria-label="Logout">
+
+                        Logout
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+        <!--==================== PAGE TITLE ==================== -->
+
+        <section class="dashboard-header" portal-page-header>
+
+            <h1>Student Performance Reports</h1>
+
+            <p>
+                Advanced reporting, filtering, analytics and export system.
+            </p>
+
+        </section>
+
+        <!-- ==================== SUMMARY ==================== -->
+
+        <section id="reportSummary" class="dashboard-cards">
+
+            <div class="card">
+                <h2 id="reportStudents">
+
+                    250
+
+                </h2>
+                <p>Total Students</p>
+            </div>
+
+            <div class="card">
+                <h2 id="reportDepartments">
+
+                    4
+
+                </h2>
+                <p>Departments</p>
+            </div>
+
+            <div class="card">
+                <h2 id="reportAttendance">
+
+                    93%
+
+                </h2>
+                <p>Attendance</p>
+            </div>
+
+            <div class="card">
+                <h2 id="reportGPA">
+
+                    3.65
+
+                </h2>
+                <p>Average GPA</p>
+            </div>
+
+        </section>
+
+        <!-- ==================== SEARCH & FILTER ==================== -->
+
+        <section id="reportFilters" class="table-section">
+
+            <h2>Search & Filter</h2>
+
+            <div class="filter-container">
+                <div class="search-box">
+
+                    <input type="search" id="searchInput" class="dashboard-search" autocomplete="off"
+                        placeholder="Search by Name or ID..." aria-label="Search Student">
+                </div>
+
+                <select id="departmentFilter" aria-label="Filter by Department">
+
+                    <option value="All">All Departments</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+
+                </select>
+
+                <select id="cgpaFilter" aria-label="Filter by GPA">
+
+                    <option value="All">All GPA</option>
+                    <option value="3.5">3.5+</option>
+                    <option value="3.0">3.0+</option>
+                    <option value="2.5">2.5+</option>
+
+                </select>
+
+                <select id="attendanceFilter" aria-label="Filter by Attendance">
+
+                    <option value="All">Attendance</option>
+                    <option value="90">90%+</option>
+                    <option value="80">80%+</option>
+                    <option value="70">70%+</option>
+
+                </select>
+
+                <button id="resetFilters" class="btn" type="button">
+
+                    Reset Filters
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== EXPORT ==================== -->
+
+        <section id="reportExports" class="dashboard-cards">
+
+            <div class="export-buttons">
+
+                <button class="btn" id="exportCSV" type="button">
+                    📄 Export CSV
+                </button>
+
+                <button class="btn" id="exportPDF">
+                    📑 Export PDF
+                </button>
+
+                <button class="btn" id="printReport">
+                    🖨 Print Report
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== REPORT TABLE ==================== -->
+
+        <section id="reportTableSection" class="table-section">
+
+            <h2>Student Performance Report</h2>
+            <div class="table-wrapper">
+
+
+                <table id="studentTable">
+                    <caption>
+
+                        Student Performance Report
+
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Attendance</th>
+                            <th scope="col">CGPA</th>
+                            <th scope="col">Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <tr>
+
+                            <td>SP001</td>
+                            <td>Muhammad Kumail</td>
+                            <td>Computer Science</td>
+                            <td>95%</td>
+                            <td>3.82</td>
+                            <td>
+                                <span class="status excellent">
+                                    Excellent
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP002</td>
+                            <td>Ali Khan</td>
+                            <td>Software Engineering</td>
+                            <td>91%</td>
+                            <td>3.56</td>
+                            <td>
+                                <span class="status good">
+                                    Good
+                                </span>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP003</td>
+                            <td>Fatima Noor</td>
+                            <td>Information Technology</td>
+                            <td>94%</td>
+                            <td>3.74</td>
+                            <td>
+                                <span class="status excellent">
+                                    Excellent
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP004</td>
+                            <td>Ahmed Raza</td>
+                            <td>Artificial Intelligence</td>
+                            <td>89%</td>
+                            <td>3.43</td>
+                            <td>
+                                <span class="status good">
+                                    Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP005</td>
+                            <td>Ayesha Malik</td>
+                            <td>Computer Science</td>
+                            <td>97%</td>
+                            <td>3.91</td>
+                            <td>
+                                <span class="status excellent">
+                                    Outstanding
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP006</td>
+                            <td>Bilal Ahmed</td>
+                            <td>Software Engineering</td>
+                            <td>90%</td>
+                            <td>3.48</td>
+                            <td>
+                                <span class="status good">
+                                    Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP007</td>
+                            <td>Zain Ali</td>
+                            <td>Computer Science</td>
+                            <td>96%</td>
+                            <td>3.88</td>
+                            <td>
+                                <span class="status excellent">
+                                    Excellent
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>SP008</td>
+                            <td>Hina Khan</td>
+                            <td>Information Technology</td>
+                            <td>92%</td>
+                            <td>3.61</td>
+                            <td>
+                                <span class="status excellent">
+                                    Excellent
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ==================== PAGINATION ==================== -->
+
+        <section class="pagination">
+
+            <button id="prevBtn" class="btn" type="button">
+
+                Previous
+
+            </button>
+
+            <span id="pageInfo">
+
+                Page 1
+
+            </span>
+
+            <button id="nextBtn" class="btn" type="button">
+
+                Next
+
+            </button>
+
+        </section>
+
+        <!-- ==================== ANALYTICS ==================== -->
+
+        <section id="analyticsToolbar" class="dashboard-toolbar">
+
+            <label for="chartFilter" class="visually-hidden">
+
+                Filter Analytics
+
+            </label>
+
+            <select id="chartFilter">
+
+                <option value="year">
+
+                    Year
+
+                </option>
+
+                <option value="month">
+
+                    Month
+
+                </option>
+
+                <option value="week">
+
+                    Week
+
+                </option>
+
+            </select>
+
+            <button class="btn" id="exportChartsBtn" type="button">
+
+                Export Charts
+
+            </button>
+
+            <button class="btn" id="printAnalyticsBtn" type="button">
+
+                Print Analytics
+
+            </button>
+
+        </section>
+
+        <section class="analytics-section">
+
+            <div class="dashboard-header">
+
+                <h2>Analytics Dashboard</h2>
+
+                <p>
+                    Interactive reports and visual analytics.
+                </p>
+
+            </div>
+
+            <div class="chart-grid">
+
+                <div class="card">
+
+                    <h3>Department Distribution</h3>
+
+                    <canvas id="departmentChart" role="img" aria-label="Department Distribution Chart">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Average GPA</h3>
+
+                    <canvas id="gpaChart" role="img" aria-label="Average GPA Chart">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Attendance Analysis</h3>
+
+                    <canvas id="attendanceChart" role="img" aria-label="Attendance Analysis Chart">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Subject Performance</h3>
+
+                    <canvas id="performanceChart" role="img" aria-label="Subject Performance Chart">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Monthly Activity</h3>
+
+                    <canvas id="activityChart" role="img" aria-label="Monthly Activity Chart">
+                    </canvas>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Assignment Completion</h3>
+
+                    <canvas id="assignmentChart" role="img" aria-label="Assignment Completion Chart">
+                    </canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="table-section">
+
+            <div class="activity-section">
+
+                <h2>Recent Activity</h2>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">📘</div>
+
+                        <div class="activity-content">
+
+                            <h4>Assignment Submitted</h4>
+
+                            <p>Muhammad Kumail submitted the Web Engineering assignment.</p>
+
+                            <small>10 minutes ago</small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">✅</div>
+
+                        <div class="activity-content">
+
+                            <h4>Attendance Updated</h4>
+
+                            <p>Attendance records have been updated successfully.</p>
+
+                            <small>30 minutes ago</small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">📊</div>
+
+                        <div class="activity-content">
+
+                            <h4>Report Generated</h4>
+
+                            <p>Monthly performance report has been generated.</p>
+
+                            <small>1 hour ago</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==================== NOTIFICATIONS ==================== -->
+
+    <div id="notificationPanel" class="notification-panel">
+
+        <div class="notification-header">
+
+            <h3>
+
+                Notifications
+
+            </h3>
+
+            <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                ✖
+
+            </button>
+
+        </div>
+
+        <input type="search" id="notificationSearch" class="notification-search" placeholder="Search notifications..."
+            autocomplete="off" aria-label="Search Notifications">
+        <div id="notificationList" class="notification-list">
+
+        </div>
+
+    </div>
+    <div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
+        <div class="loader-circle"></div>
+
+        <p aria-live="polite">
+
+            Loading reports...
+
+        </p>
+
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>

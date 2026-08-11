@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Contact the Student Performance Analytics Portal team for support, questions, feedback, and technical assistance.">
+
+    <meta name="keywords"
+        content="Contact, Student Portal, Support, Feedback, Help Desk, Student Performance Analytics Portal">
+
+    <meta name="author" content="Muhammad Kumail Noor">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#312e81">
+
+    <!-- Title -->
+    <title>
+        Contact | Student Performance Analytics Portal
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to Main Content
+    </a>
+    <div id="pageLoader" class="page-loader">
+
+        <div class="loader-spinner"></div>
+
+        <p>Loading...</p>
+
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header" role="banner">
+
+        <nav class="navbar" role="navigation">
+
+            <a href="index.html" class="logo" aria-label="Student Performance Analytics Portal">
+
+                Student Portal
+
+            </a>
+
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <ul id="navLinks" class="nav-links" aria-label="Main Navigation">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <!-- <li><a href="login.html">Login</a></li> -->
+
+                <!-- <li><a href="register.html">Register</a></li> -->
+
+                <li><a href="reports.html">Reports</a></li>
+
+                <li><a href="contact.html" class="active">Contact</a></li>
+
+                <li>
+
+                    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle Theme">
+
+                        🌙 Theme
+
+                    </button>
+
+                </li>
+                <li>
+
+                    <button id="notificationToggle" class="notification-btn" type="button"
+                        aria-label="Open Notifications">
+
+                        🔔 Notifications
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+
+
+        <!-- ==================== PAGE HEADER ==================== -->
+
+        <section class="dashboard-header">
+
+            <h1>
+
+                Contact Us
+
+            </h1>
+
+            <p>
+
+                We'd love to hear from you. Send us your questions, feedback, or suggestions.
+
+            </p>
+
+        </section>
+
+        <!-- ==================== CONTACT FORM ==================== -->
+
+        <section id="contactSection" class="form-container">
+
+            <div class="form-box">
+
+                <h2>
+
+                    Send a Message
+
+                </h2>
+
+                <form id="contactForm" autocomplete="on" novalidate>
+
+                    <div class="input-group">
+
+                        <label for="contactName">
+
+                            Full Name
+
+                        </label>
+                        <input type="text" id="contactName" name="contactName" autocomplete="name"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="contactEmail">
+
+                            Email Address
+
+                        </label>
+
+                        <input type="email" id="contactEmail" name="contactEmail" autocomplete="email"
+                            placeholder="Enter your email" required>
+
+                    </div>
+                    <div class="input-group">
+
+                        <label for="contactPhone">
+
+                            Phone Number
+
+                        </label>
+
+                        <input type="tel" id="contactPhone" name="contactPhone" autocomplete="tel"
+                            placeholder="+92 300 1234567">
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="contactSubject">
+
+                            Subject
+
+                        </label>
+
+                        <input type="text" id="contactSubject" name="contactSubject" placeholder="Enter subject"
+                            required>
+                    </div>
+                    <div class="input-group">
+
+                        <label for="contactPriority">
+
+                            Priority
+
+                        </label>
+
+                        <select id="contactPriority" name="contactPriority">
+                            <option>Low</option>
+
+                            <option>Medium</option>
+
+                            <option>High</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="contactMessage">
+
+                            Message
+
+                        </label>
+
+                        <textarea id="contactMessage" name="contactMessage" rows="6" maxlength="500"
+                            placeholder="Write your message here..." required></textarea>
+
+                        <small id="messageCounter">
+                            0 / 500 Characters
+                        </small>
+
+                    </div>
+
+                    <button type="submit" class="btn" id="sendMessageBtn">
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== CONTACT INFO ==================== -->
+
+        <section class="dashboard-header">
+
+            <h2>
+
+                Contact Information
+
+            </h2>
+
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>📍 Address</h3>
+
+                <p>
+
+                    Department of Computer Science<br>
+                    ABC University<br>
+                    Pakistan
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+
+                    +92 300 1234567
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📧 Email</h3>
+
+                <p>
+
+                    support@studentportal.edu
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🕒 Office Hours</h3>
+
+                <p>
+
+                    Monday – Friday<br>
+
+                    9:00 AM – 5:00 PM
+
+                </p>
+
+            </div>
+
+        </section>
+        <section class="dashboard-header">
+
+            <h2>
+
+                Support Services
+
+            </h2>
+
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <h3>
+
+                    Average Response
+
+                </h3>
+
+                <h2>
+
+                    24 Hours
+
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Support Tickets
+
+                </h3>
+
+                <h2 id="ticketCount">
+
+                    125
+
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+
+                    Customer Satisfaction
+
+                </h3>
+
+                <h2>
+
+                    98%
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== GOOGLE MAP PLACEHOLDER ==================== -->
+
+        <section class="dashboard-header">
+
+            <h2>
+
+                Our Location
+
+            </h2>
+
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <iframe title="Student Portal Location"
+                    src="https://www.google.com/maps?q=Islamabad,Pakistan&output=embed" width="100%" height="350"
+                    style="border:0;border-radius:10px;" loading="lazy">
+
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+    <aside id="notificationPanel" class="notification-panel" aria-labelledby="notificationHeading">
+
+        <div class="notification-header">
+
+            <h3 id="notificationHeading">
+
+                Notifications
+
+            </h3>
+
+            <button id="closeNotifications" type="button" aria-label="Close Notifications">
+
+                ✖
+
+            </button>
+
+        </div>
+
+        <input type="search" id="notificationSearch" class="notification-search" autocomplete="off"
+            aria-label="Search Notifications" placeholder="Search notifications...">
+
+        <div id="notificationList">
+
+        </div>
+
+    </aside>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <!-- ==================== PROFESSIONAL FOOTER ==================== -->
+
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    Student Portal
+                </a>
+
+                <p class="footer-description">
+                    Student Performance Analytics Portal for managing
+                    academic performance, attendance, analytics and reports.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Access -->
+            <nav class="footer-navigation" aria-label="Footer Navigation">
+
+                <h3>
+                    Quick Access
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-status">
+
+                <span class="status-indicator" aria-hidden="true"></span>
+
+                <span>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <p class="footer-copyright">
+
+                © <span id="currentYear"></span>
+                Student Performance Analytics Portal.
+                All Rights Reserved.
+
+            </p>
+
+
+            <p class="footer-developer">
+
+                Developed by
+                <strong>Muhammad Kumail Noor</strong>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==================== Core JavaScript Files ==================== -->
+
+    <script src="js/theme.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/notifications.js"></script>
+
+</body>
+
+</html>
