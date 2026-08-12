@@ -369,3 +369,11 @@ The theme functionality is managed through:
 
 ```text
 js/theme.js
+
+## 🌐 Live Demo
+
+Experience the Student Performance Analytics Portal online:
+
+**[🚀 Open Live Demo](https://muhammadkumail317.github.io/student-performance-analytics-portal/)**
+
+The project is deployed using **GitHub Pages** and is automatically updated from the `main` branch.
