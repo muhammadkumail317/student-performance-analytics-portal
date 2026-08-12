@@ -15,6 +15,35 @@ The system allows users to access academic information through dedicated dashboa
 The project was developed as part of an **internship project** with a focus on practical web development, responsive UI design, JavaScript functionality, data visualization, and user experience.
 
 ---
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](images/screenshots/home.png)
+
+### 🔐 Login Page
+
+![Login Page](images/screenshots/login.png)
+
+### 👨‍🎓 Student Dashboard
+
+![Student Dashboard](images/screenshots/student-dashboard.png)
+
+### 👨‍🏫 Teacher Dashboard
+
+![Teacher Dashboard](images/screenshots/teacher-dashboard.png)
+
+### 👤 Profile Page
+
+![Profile Page](images/screenshots/profile.png)
+
+### 📊 Performance Reports
+
+![Performance Reports](images/screenshots/report.png)
+
+### 📞 Contact Page
+
+![Contact Page](images/screenshots/contact.png)
 
 ## 🎯 Project Objectives
 
