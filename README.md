@@ -19,31 +19,31 @@ The project was developed as part of an **internship project** with a focus on p
 
 ### 🏠 Home Page
 
-![Home Page](images/screenshots/home.png)
+![Home Page](images/screenshots/home.PNG)
 
 ### 🔐 Login Page
 
-![Login Page](images/screenshots/login.png)
+![Login Page](images/screenshots/login.PNG)
 
 ### 👨‍🎓 Student Dashboard
 
-![Student Dashboard](images/screenshots/student-dashboard.png)
+![Student Dashboard](images/screenshots/student-dashboard.PNG)
 
 ### 👨‍🏫 Teacher Dashboard
 
-![Teacher Dashboard](images/screenshots/teacher-dashboard.png)
+![Teacher Dashboard](images/screenshots/teacher-dashboard.PNG)
 
 ### 👤 Profile Page
 
-![Profile Page](images/screenshots/profile.png)
+![Profile Page](images/screenshots/profile.PNG)
 
 ### 📊 Performance Reports
 
-![Performance Reports](images/screenshots/report.png)
+![Performance Reports](images/screenshots/report.PNG)
 
 ### 📞 Contact Page
 
-![Contact Page](images/screenshots/contact.png)
+![Contact Page](images/screenshots/contact.PNG)
 
 
 ## 🌐 Live Demo
