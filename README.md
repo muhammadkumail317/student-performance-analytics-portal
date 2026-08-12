@@ -45,6 +45,17 @@ The project was developed as part of an **internship project** with a focus on p
 
 ![Contact Page](images/screenshots/contact.png)
 
+
+## 🌐 Live Demo
+
+Experience the Student Performance Analytics Portal online:
+
+**[🚀 Open Live Demo](https://muhammadkumail317.github.io/student-performance-analytics-portal/)**
+
+The project is deployed using **GitHub Pages** and is automatically updated from the `main` branch.
+
+
+
 ## 🎯 Project Objectives
 
 The main objectives of this project are:
@@ -369,11 +380,3 @@ The theme functionality is managed through:
 
 ```text
 js/theme.js
-
-## 🌐 Live Demo
-
-Experience the Student Performance Analytics Portal online:
-
-**[🚀 Open Live Demo](https://muhammadkumail317.github.io/student-performance-analytics-portal/)**
-
-The project is deployed using **GitHub Pages** and is automatically updated from the `main` branch.
